@@ -25,13 +25,21 @@ export default function Header() {
         }`}
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-24">
-          <Link href="/" className="flex items-center">
-            <img src="/logo.png" alt="Dona Tulipa" className="h-14 sm:h-16 w-auto" />
-          </Link>
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center py-4 sm:py-5">
+          <div className="flex items-center justify-between w-full md:justify-center">
+            <Link href="/" className="flex items-center">
+              <img src="/logo.png" alt="Dona Tulipa" className="h-16 sm:h-20 w-auto" />
+            </Link>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden p-2.5 text-rose-700 hover:bg-white/50 rounded-xl transition-colors"
+            >
+              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 mt-0.5">
             {categorias.map((cat) => (
               <Link
                 key={cat.slug}
@@ -42,13 +50,6 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2.5 text-rose-700 hover:bg-white/50 rounded-xl transition-colors"
-          >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
         </div>
       </div>
 
