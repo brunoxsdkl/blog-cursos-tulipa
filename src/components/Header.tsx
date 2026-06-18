@@ -27,7 +27,7 @@ export default function Header() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center h-28 sm:h-32">
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 mr-8 sm:mr-16">
             <img src="/logo.png" alt="Dona Tulipa" className="h-28 sm:h-32 w-auto" />
           </Link>
 
