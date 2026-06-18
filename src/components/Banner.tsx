@@ -29,14 +29,13 @@ export default function Banner() {
             height: `${PHONE.heightPct * 100}%`,
           }}
         >
-          <iframe
-            src="https://www.instagram.com/p/DZQvYEBx61E/embed"
-            className="w-full h-full"
-            frameBorder="0"
-            scrolling="no"
-            allowTransparency
-            allowFullScreen
-            title="Saboaria Artesanal"
+          <video
+            src="/andreia.mp4"
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
           />
         </div>
       </div>
