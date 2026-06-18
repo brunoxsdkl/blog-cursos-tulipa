@@ -8,7 +8,7 @@ export default function WhatsAppFloating() {
     >
       <div className="relative">
         <div className="absolute inset-0 rounded-full animate-ping opacity-20 bg-rose-400" />
-        <div className="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-lg shadow-rose-300/40 hover:shadow-rose-400/60 hover:scale-110 transition-all duration-300 overflow-hidden">
+        <div className="relative flex items-center justify-center w-24 h-24 sm:w-28 sm:h-28 rounded-full shadow-lg shadow-rose-300/40 hover:shadow-rose-400/60 hover:scale-110 transition-all duration-300 overflow-hidden">
           <img
             src="/whatsapp.png"
             alt="WhatsApp"
