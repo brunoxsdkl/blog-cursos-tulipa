@@ -20,8 +20,8 @@ export default function Header() {
       <div
         className={`absolute inset-0 transition-all duration-500 ${
           scrolled
-            ? "bg-gradient-to-r from-rose-100/70 via-white/80 to-pink-100/70 backdrop-blur-xl border-b border-white/30 shadow-lg shadow-rose-200/20"
-            : "bg-gradient-to-r from-white/20 via-white/40 to-white/20 backdrop-blur-lg border-b border-white/20"
+            ? "bg-gradient-to-r from-rose-100/60 via-white/80 to-pink-100/60 backdrop-blur-xl border-b border-white/30 shadow-lg shadow-rose-200/20"
+            : "bg-gradient-to-r from-rose-50/30 via-white/50 to-pink-50/30 backdrop-blur-lg border-b border-white/20"
         }`}
       />
 
