@@ -18,7 +18,7 @@ export default function CourseCard({ curso }: { curso: Curso }) {
           </Badge>
         </div>
         <CardContent className="p-5">
-          <h3 className="font-semibold text-base text-rose-900 mb-2 line-clamp-2 group-hover:text-rose-600 transition-colors">
+          <h3 className="text-sm uppercase tracking-[0.1em] font-medium text-rose-800 mb-2 line-clamp-2 group-hover:text-rose-600 transition-colors">
             {curso.titulo}
           </h3>
           <p className="text-sm text-rose-500 line-clamp-2 leading-relaxed">
