@@ -26,9 +26,9 @@ export default function Header() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 sm:h-24">
+        <div className="flex items-center justify-between h-28 sm:h-32">
           <Link href="/" className="flex items-center">
-            <img src="/logo.png" alt="Dona Tulipa" className="h-16 sm:h-18 w-auto" />
+            <img src="/logo.png" alt="Dona Tulipa" className="h-28 sm:h-32 w-auto" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

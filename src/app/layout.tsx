@@ -40,7 +40,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white`}>
         <Header />
-        <main className="min-h-screen pt-20 sm:pt-24">{children}</main>
+        <main className="min-h-screen pt-28 sm:pt-32">{children}</main>
         <Footer />
         <WhatsAppFloating />
         <Toaster />
