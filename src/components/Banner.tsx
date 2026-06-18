@@ -1,5 +1,8 @@
 "use client"
 
+import { useRef, useState } from "react"
+import { Volume2, VolumeX } from "lucide-react"
+
 const ASPECT = 1920 / 650
 
 const PHONE = {
@@ -10,6 +13,15 @@ const PHONE = {
 }
 
 export default function Banner() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const [soundOn, setSoundOn] = useState(false)
+
+  const toggleSound = () => {
+    if (!videoRef.current) return
+    videoRef.current.muted = !videoRef.current.muted
+    setSoundOn(!videoRef.current.muted)
+  }
+
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-br from-rose-50 via-white to-pink-50">
       <div className="relative w-full" style={{ aspectRatio: `${ASPECT}` }}>
@@ -21,7 +33,7 @@ export default function Banner() {
         />
 
         <div
-          className="absolute overflow-hidden rounded-[22px]"
+          className="absolute overflow-hidden rounded-[22px] group"
           style={{
             left: `${PHONE.leftPct * 100}%`,
             top: `${PHONE.topPct * 100}%`,
@@ -30,6 +42,7 @@ export default function Banner() {
           }}
         >
           <video
+            ref={videoRef}
             src="/andreia.mp4"
             className="w-full h-full object-cover"
             autoPlay
@@ -37,6 +50,14 @@ export default function Banner() {
             loop
             playsInline
           />
+
+          <button
+            onClick={toggleSound}
+            className="absolute bottom-1 right-1 p-1 rounded-full bg-black/50 text-white transition-opacity"
+            title={soundOn ? "Desativar som" : "Ativar som"}
+          >
+            {soundOn ? <Volume2 className="h-3 w-3" /> : <VolumeX className="h-3 w-3" />}
+          </button>
         </div>
       </div>
     </div>
