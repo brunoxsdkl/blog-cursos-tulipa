@@ -27,19 +27,16 @@ export default function Header() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/logo.png" alt="Dona Tulipa" className="h-10 sm:h-12 w-auto" />
-            <span className="font-bold text-2xl sm:text-3xl tracking-tight bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
-              Dona Tulipa
-            </span>
+          <Link href="/" className="flex items-center">
+            <img src="/logo.png" alt="Dona Tulipa" className="h-14 sm:h-16 w-auto" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-2">
+          <nav className="hidden md:flex items-center gap-8">
             {categorias.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/?categoria=${cat.slug}`}
-                className="px-5 py-2.5 text-sm font-medium text-rose-700 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 rounded-full transition-all duration-300"
+                className="relative text-xs uppercase tracking-[0.15em] font-medium text-rose-700/80 hover:text-rose-900 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-rose-400 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {cat.nome}
               </Link>
@@ -57,13 +54,13 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="md:hidden bg-gradient-to-b from-white/90 to-rose-50/90 backdrop-blur-xl border-t border-white/30">
-          <div className="px-4 py-4 flex flex-col gap-2">
+          <div className="px-4 py-4 flex flex-col gap-1">
             {categorias.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/?categoria=${cat.slug}`}
                 onClick={() => setMobileOpen(false)}
-                className="px-5 py-3.5 text-rose-700 hover:text-white hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-500 rounded-xl transition-all duration-300 text-sm font-medium"
+                className="px-4 py-3 text-rose-700 hover:text-rose-900 border-l-2 border-transparent hover:border-rose-400 transition-all duration-300 text-sm uppercase tracking-wider"
               >
                 {cat.nome}
               </Link>
