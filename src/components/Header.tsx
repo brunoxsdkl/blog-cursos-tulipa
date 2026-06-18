@@ -26,12 +26,12 @@ export default function Header() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-28 sm:h-32">
-          <Link href="/" className="flex items-center">
+        <div className="flex items-center h-28 sm:h-32">
+          <Link href="/" className="flex-shrink-0">
             <img src="/logo.png" alt="Dona Tulipa" className="h-28 sm:h-32 w-auto" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center justify-center flex-1 gap-8">
             {categorias.map((cat) => (
               <Link
                 key={cat.slug}
@@ -43,7 +43,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-3 ml-4">
+          <div className="hidden md:flex items-center gap-3 flex-shrink-0">
             <a
               href="https://www.instagram.com/andreia.tulipa/"
               target="_blank"
@@ -78,7 +78,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2.5 text-rose-700 hover:bg-white/50 rounded-xl transition-colors"
+            className="md:hidden p-2.5 text-rose-700 hover:bg-white/50 rounded-xl transition-colors flex-shrink-0"
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
