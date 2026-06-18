@@ -30,7 +30,7 @@ export default function CourseList() {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-rose-900">
+        <h2 className="w-full text-center text-lg sm:text-xl uppercase tracking-[0.15em] font-medium text-rose-700/80">
           {categoriaAtiva === "todos"
             ? "Todos os Cursos"
             : categorias.find((c) => c.slug === categoriaAtiva)?.nome}
