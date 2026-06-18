@@ -28,7 +28,7 @@ export default function Header() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
           <Link href="/" className="flex items-center gap-3">
-            <span className="text-3xl">🌷</span>
+            <img src="/logo.png" alt="Dona Tulipa" className="h-10 sm:h-12 w-auto" />
             <span className="font-bold text-2xl sm:text-3xl tracking-tight bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
               Dona Tulipa
             </span>
