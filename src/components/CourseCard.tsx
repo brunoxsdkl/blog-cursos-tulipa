@@ -8,19 +8,22 @@ export default function CourseCard({ curso }: { curso: Curso }) {
   return (
     <Link href={`/cursos/${curso.slug}`}>
       <Card className="group h-full overflow-hidden border-rose-100 hover:border-rose-300 hover:shadow-lg transition-all duration-300 bg-white">
-        <div className="aspect-[4/3] bg-gradient-to-br from-rose-100 via-rose-50 to-pink-50 flex items-center justify-center relative overflow-hidden">
+        <div className={`relative flex items-center justify-center overflow-hidden rounded-t-xl ${curso.video ? "" : "bg-gradient-to-br from-rose-100 via-rose-50 to-pink-50"}`}>
           {curso.video ? (
             <video
               src={curso.video}
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full object-cover"
+              style={{ aspectRatio: "1/1", minHeight: "300px" }}
               autoPlay
               muted
               loop
               playsInline
             />
           ) : (
-            <div className="text-6xl opacity-30 group-hover:scale-110 group-hover:opacity-40 transition-all duration-500">
-              🌷
+            <div className="w-full flex items-center justify-center" style={{ aspectRatio: "1/1" }}>
+              <div className="text-6xl opacity-30 group-hover:scale-110 group-hover:opacity-40 transition-all duration-500">
+                🌷
+              </div>
             </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
