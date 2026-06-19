@@ -21,8 +21,9 @@ export const metadata: Metadata = {
   description:
     "Transforme criatividade em renda com nossos cursos artesanais. Saboaria, velas, cosméticos e muito mais.",
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/logo.png?v=2",
+    shortcut: "/logo.png?v=2",
+    apple: "/logo.png?v=2",
   },
   openGraph: {
     title: "Blog de Cursos | Dona Tulipa",
