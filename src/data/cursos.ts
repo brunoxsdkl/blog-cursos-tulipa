@@ -89,7 +89,7 @@ export const cursos: Curso[] = [
       {
         pergunta: "O material está incluso?",
         resposta:
-          "Disponibilizamos uma lista completa com fornecedores confiáveis e sugestões de kits iniciais com investimento a partir de R$ 80.",
+          "Sim! Todo o material necessário para a prática durante o curso está incluso no valor. Você produzirá seu próprio produto e levará para casa o resultado final.",
       },
       {
         pergunta: "Posso vender os produtos depois?",
@@ -148,7 +148,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "O material está incluso?",
-        resposta: "Fornecemos lista detalhada de fornecedores com os melhores preços do mercado e indicação de kits para começar.",
+        resposta: "Sim! Todo o material necessário para a prática durante o curso está incluso no valor. Você produzirá seu próprio produto e levará para casa o resultado final.",
       },
       {
         pergunta: "Posso vender os produtos depois?",
@@ -205,7 +205,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "O material está incluso?",
-        resposta: "Sim. Inclui tabela de fornecedores, lista de insumos essenciais e planilha de precificação.",
+        resposta: "Sim! Todo o material necessário para a prática durante o curso está incluso no valor. Você produzirá seu próprio produto e levará para casa o resultado final.",
       },
       {
         pergunta: "Posso vender os produtos depois?",
@@ -262,7 +262,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "O material está incluso?",
-        resposta: "Sim. Planilhas de precificação, calendário editorial para redes sociais e roteiro de 7 dias para primeira venda.",
+        resposta: "Sim! Todo o material necessário para a prática durante o curso está incluso no valor. Você produzirá seu próprio produto e levará para casa o resultado final.",
       },
       {
         pergunta: "Posso vender os produtos depois?",
