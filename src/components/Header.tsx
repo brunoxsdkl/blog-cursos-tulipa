@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
-import { categorias } from "@/data/cursos"
+import { categorias, getCursosPorCategoria } from "@/data/cursos"
 import Link from "next/link"
 
 export default function Header() {
@@ -35,7 +35,10 @@ export default function Header() {
             {categorias.map((cat) => (
               <Link
                 key={cat.slug}
-                href={`/?categoria=${cat.slug}`}
+                href={(() => {
+                  const curso = getCursosPorCategoria(cat.slug)
+                  return curso.length > 0 ? `/cursos/${curso[0].slug}` : "/"
+                })()}
                 className="relative text-sm uppercase tracking-[0.15em] font-medium text-rose-700/80 hover:text-rose-900 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-rose-400 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {cat.nome}
@@ -91,7 +94,10 @@ export default function Header() {
             {categorias.map((cat) => (
               <Link
                 key={cat.slug}
-                href={`/?categoria=${cat.slug}`}
+                href={(() => {
+                  const curso = getCursosPorCategoria(cat.slug)
+                  return curso.length > 0 ? `/cursos/${curso[0].slug}` : "/"
+                })()}
                 onClick={() => setMobileOpen(false)}
                 className="px-4 py-3 text-rose-700 hover:text-rose-900 border-l-2 border-transparent hover:border-rose-400 transition-all duration-300 text-sm uppercase tracking-wider"
               >
