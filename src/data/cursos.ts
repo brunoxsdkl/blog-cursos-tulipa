@@ -6,6 +6,7 @@ export interface Curso {
   categoriaNome: string
   descricao: string
   imagem: string
+  video?: string
   nivel: "Iniciante" | "Intermediário" | "Avançado"
   tempoLeitura: string
   tecnicas: string[]
@@ -230,6 +231,7 @@ export const cursos: Curso[] = [
     descricao:
       "O guia definitivo para transformar sua habilidade manual em um negócio rentável. Aprenda a estruturar sua marca, precificar seus produtos, divulgar nas redes sociais e fidelizar clientes.",
     imagem: "/images/faca-lucre.jpg",
+    video: "/limpeza.mp4",
     nivel: "Iniciante",
     tempoLeitura: "10 min",
     tecnicas: [
