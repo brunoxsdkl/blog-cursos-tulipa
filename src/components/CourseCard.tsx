@@ -8,7 +8,7 @@ export default function CourseCard({ curso }: { curso: Curso }) {
   return (
     <Link href={`/cursos/${curso.slug}`}>
       <Card className="group h-full overflow-hidden border-rose-100 hover:border-rose-300 hover:shadow-lg transition-all duration-300 bg-white">
-        <div className="aspect-[16/9] bg-gradient-to-br from-rose-100 via-rose-50 to-pink-50 flex items-center justify-center relative overflow-hidden">
+        <div className="aspect-[4/3] bg-gradient-to-br from-rose-100 via-rose-50 to-pink-50 flex items-center justify-center relative overflow-hidden">
           {curso.video ? (
             <video
               src={curso.video}
