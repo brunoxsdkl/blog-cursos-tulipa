@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { cursos } from "@/data/cursos"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -8,15 +8,26 @@ import { Check } from "lucide-react"
 
 const VAGAS_TOTAIS = 20
 
-const vagasMock: Record<string, number> = {
-  "saboaria-artesanal-modulo-1": 0,
-  "velas-artesanais-completo": 0,
-  "cosmeticos-perfumaria-completo": 0,
-  "faca-lucre-empreendedorismo": 0,
-}
-
 export default function VagasPage() {
   const [selected, setSelected] = useState<string | null>(null)
+  const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, number> | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch("/api/vagas")
+      .then((r) => r.json())
+      .then((data) => {
+        if (data && !data.error) {
+          const map: Record<string, number> = {}
+          for (const [slug, info] of Object.entries(data) as [string, { vagas_preenchidas: number }][]) {
+            map[slug] = info.vagas_preenchidas
+          }
+          setVagasAoVivo(map)
+        }
+      })
+      .catch(() => {})
+      .finally(() => setLoading(false))
+  }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 to-white">
@@ -35,7 +46,7 @@ export default function VagasPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {cursos.map((curso) => {
-            const preenchidas = vagasMock[curso.id] ?? 0
+            const preenchidas = vagasAoVivo?.[curso.slug] ?? (loading ? 0 : 0)
             const restantes = VAGAS_TOTAIS - preenchidas
             const isSelected = selected === curso.id
 
