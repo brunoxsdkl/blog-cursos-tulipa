@@ -119,6 +119,7 @@ export const cursos: Curso[] = [
     descricao:
       "Domine a arte da velas artesanais, desde as clássicas velas decorativas até as modernas velas aromáticas em potes de vidro. Um curso completo para quem quer empreender nesse mercado que cresce 25% ao ano.",
     imagem: "/images/velas.jpg",
+    video: "/velas.mp4",
     nivel: "Iniciante",
     tempoLeitura: "12 min",
     tecnicas: [
