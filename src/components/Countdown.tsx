@@ -53,6 +53,15 @@ export default function Countdown() {
           </div>
         ))}
       </div>
+
+      <div className="flex justify-center mt-10">
+        <a
+          href="#"
+          className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-sm uppercase tracking-[0.15em] font-medium shadow-lg shadow-rose-300/40 hover:shadow-rose-400/60 hover:scale-105 transition-all duration-300"
+        >
+          CONSULTE AS VAGAS!
+        </a>
+      </div>
     </section>
   )
 }
