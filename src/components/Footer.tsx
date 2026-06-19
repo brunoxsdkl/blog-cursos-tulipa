@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="mb-3">
-              <img src="/logo.png" alt="Dona Tulipa" className="h-12 sm:h-14 w-auto" />
+              <img src="/logo.png" alt="Dona Tulipa" className="h-28 sm:h-32 w-auto" />
             </div>
             <p className="text-sm text-rose-500 leading-relaxed">
               Transforme criatividade em renda com nossos cursos artesanais.
