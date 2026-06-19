@@ -7,6 +7,7 @@ import { Separator } from "@/components/ui/separator"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CursoFAQ from "@/components/CursoFAQ"
 import CursoGaleria from "@/components/CursoGaleria"
+import CursoGaleriaLimpeza from "@/components/CursoGaleriaLimpeza"
 import { Clock, BarChart, CheckCircle, MessageCircle, GraduationCap, ArrowLeft } from "lucide-react"
 
 export async function generateStaticParams() {
@@ -70,6 +71,7 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
       </div>
 
       {curso.slug === "saboaria-artesanal-modulo-1" && <CursoGaleria />}
+      {curso.slug === "produtos-limpeza" && <CursoGaleriaLimpeza />}
 
       <div className="bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl p-6 sm:p-8 mb-12 text-white">
         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
