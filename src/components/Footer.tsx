@@ -4,9 +4,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl">🌷</span>
-              <span className="font-semibold text-rose-800">Dona Tulipa</span>
+            <div className="mb-3">
+              <img src="/logo.png" alt="Dona Tulipa" className="h-12 sm:h-14 w-auto" />
             </div>
             <p className="text-sm text-rose-500 leading-relaxed">
               Transforme criatividade em renda com nossos cursos artesanais.
