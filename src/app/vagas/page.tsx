@@ -18,12 +18,6 @@ const vagasMock: Record<string, number> = {
 export default function VagasPage() {
   const [selected, setSelected] = useState<string | null>(null)
 
-  const cursoSelecionado = cursos.find((c) => c.id === selected)
-
-  const whatsappMsg = cursoSelecionado
-    ? `Olá! Tenho interesse no curso "${cursoSelecionado.titulo}". Poderia me passar mais informações sobre as vagas?`
-    : "Olá! Gostaria de saber mais sobre os cursos disponíveis."
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50/50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -116,7 +110,7 @@ export default function VagasPage() {
 
         <div className="flex justify-center">
           <a
-            href={`http://wa.me/554199210392?text=${encodeURIComponent(whatsappMsg)}`}
+            href="https://wa.me/554199210392"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-3 px-10 py-4 rounded-full text-sm uppercase tracking-[0.15em] font-medium shadow-lg transition-all duration-300 ${
