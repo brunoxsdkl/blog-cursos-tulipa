@@ -7,9 +7,6 @@ export default function Footer() {
             <div className="mb-3">
               <img src="/logo.png" alt="Dona Tulipa" className="h-28 sm:h-32 w-auto" />
             </div>
-            <p className="text-sm text-rose-500 leading-relaxed">
-              Transforme criatividade em renda com nossos cursos artesanais.
-            </p>
           </div>
           <div>
             <h4 className="text-sm font-semibold text-rose-800 mb-3">Cursos</h4>
@@ -28,7 +25,10 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-10 pt-6 border-t border-rose-100 text-center">
+        <p className="text-center text-sm text-rose-500 leading-relaxed mt-10 mb-6">
+          Transforme criatividade em renda com nossos cursos artesanais.
+        </p>
+        <div className="pt-6 border-t border-rose-100 text-center">
           <p className="text-xs text-rose-400">
             &copy; {new Date().getFullYear()} Dona Tulipa. Todos os direitos reservados.
           </p>
