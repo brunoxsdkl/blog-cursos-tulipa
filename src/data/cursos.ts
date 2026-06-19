@@ -84,7 +84,7 @@ export const cursos: Curso[] = [
       {
         pergunta: "Preciso ter experiência para começar?",
         resposta:
-          "Não. O módulo 1 foi desenvolvido para iniciantes absolutos. Você aprenderá desde os fundamentos da reação química até as técnicas mais criativas de decoração.",
+          "O curso foi criado justamente para isso! Aqui você adquire conhecimento de forma leve, didática e divertida — não importa se está começando do zero ou já tem alguma base.",
       },
       {
         pergunta: "O material está incluso?",
@@ -144,7 +144,7 @@ export const cursos: Curso[] = [
     faq: [
       {
         pergunta: "Preciso ter experiência?",
-        resposta: "Não. O curso ensina desde o básico da segurança com cera quente até técnicas decorativas avançadas.",
+        resposta: "O curso foi criado justamente para isso! Aqui você adquire conhecimento de forma leve, didática e divertida — não importa se está começando do zero ou já tem alguma base.",
       },
       {
         pergunta: "O material está incluso?",
@@ -201,7 +201,7 @@ export const cursos: Curso[] = [
     faq: [
       {
         pergunta: "Preciso ter experiência?",
-        resposta: "Conhecimentos básicos de cosmética ajudam, mas o curso é estruturado para guiar iniciantes com interesse em formulaturas.",
+        resposta: "O curso foi criado justamente para isso! Aqui você adquire conhecimento de forma leve, didática e divertida — não importa se está começando do zero ou já tem alguma base.",
       },
       {
         pergunta: "O material está incluso?",
@@ -258,7 +258,7 @@ export const cursos: Curso[] = [
     faq: [
       {
         pergunta: "Preciso ter experiência?",
-        resposta: "Não. O curso é para quem está começando e quer estruturar o negócio de forma profissional desde o início.",
+        resposta: "O curso foi criado justamente para isso! Aqui você adquire conhecimento de forma leve, didática e divertida — não importa se está começando do zero ou já tem alguma base.",
       },
       {
         pergunta: "O material está incluso?",
