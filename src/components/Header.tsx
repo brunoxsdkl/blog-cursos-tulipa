@@ -27,8 +27,8 @@ export default function Header() {
 
       {/* Top bar: redes sociais + site oficial */}
       <div className="relative border-b border-rose-200/20 bg-white/40 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-8">
-          <div className="flex items-center gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center h-8">
+          <div className="flex items-center gap-3 sm:gap-5">
             <a href="https://www.instagram.com/andreia.tulipa/" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.12em] font-medium text-rose-500/70 hover:text-rose-700 transition-colors">
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
@@ -50,12 +50,13 @@ export default function Header() {
               </svg>
               tulipa essências
             </a>
+            <span className="w-px h-3 bg-rose-200/40" />
+            <a href="https://www.tulipaessencias.com.br" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.12em] font-medium text-rose-500/70 hover:text-rose-700 transition-colors">
+              <ShoppingCart className="w-3 h-3" />
+              site oficial
+            </a>
           </div>
-          <a href="https://www.tulipaessencias.com.br" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.12em] font-medium text-rose-500/70 hover:text-rose-700 transition-colors">
-            <ShoppingCart className="w-3 h-3" />
-            site oficial
-          </a>
         </div>
       </div>
 
