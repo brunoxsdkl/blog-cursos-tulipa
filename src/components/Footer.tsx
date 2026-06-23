@@ -28,6 +28,12 @@ export default function Footer() {
         <p className="text-center text-sm text-rose-500 leading-relaxed mt-10 mb-6">
           Transforme criatividade em renda com nossos cursos artesanais.
         </p>
+        <div className="py-8 border-t border-rose-100">
+          <h3 className="text-center text-sm font-semibold text-rose-800 mb-4">PATROCINADORES</h3>
+          <div className="flex justify-center gap-8 flex-wrap">
+            <img src="/LOGO HALLSTAR.png" alt="Hallstar" className="h-12 w-auto" />
+          </div>
+        </div>
         <div className="pt-6 border-t border-rose-100 text-center">
           <p className="text-xs text-rose-400">
             &copy; {new Date().getFullYear()} Dona Tulipa. Todos os direitos reservados.
