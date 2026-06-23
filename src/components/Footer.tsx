@@ -32,6 +32,7 @@ export default function Footer() {
           <h3 className="text-center text-sm font-semibold text-rose-800 mb-4">PATROCINADORES</h3>
           <div className="flex justify-center gap-8 flex-wrap">
             <img src="/LOGO HALLSTAR.png" alt="Hallstar" className="h-12 w-auto" />
+            <img src="/nossa terra.png" alt="Nossa Terra" className="h-12 w-auto" />
           </div>
         </div>
         <div className="pt-6 border-t border-rose-100 text-center">
