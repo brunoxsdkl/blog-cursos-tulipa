@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="py-8 border-t border-rose-100">
           <h3 className="text-center text-sm font-semibold text-rose-800 mb-4">PATROCINADORES</h3>
           <div className="flex justify-center gap-16 flex-wrap">
-            <img src="/LOGO HALLSTAR.png" alt="Hallstar" className="h-24 w-auto" />
+            <img src="/LOGO HALLSTAR.png" alt="Hallstar" className="h-12 w-auto" />
             <img src="/nossa terra.png" alt="Nossa Terra" className="h-24 w-auto" />
           </div>
         </div>
