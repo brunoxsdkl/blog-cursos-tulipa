@@ -25,6 +25,7 @@ export default function Banner() {
   return (
     <div className="relative w-full overflow-hidden bg-gradient-to-br from-rose-50 via-white to-pink-50">
       <div className="relative w-full" style={{ aspectRatio: `${ASPECT}` }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-rose-50/20 via-transparent to-rose-50/20 sm:bg-none" />
         <img
           src="/banner.png"
           alt="Banner Dona Tulipa"

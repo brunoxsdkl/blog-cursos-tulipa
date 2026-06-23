@@ -63,7 +63,7 @@ export default function VagasPage() {
                       : "border-rose-100 hover:border-rose-300 hover:shadow-md"
                   }`}
                 >
-                  <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "1/1", minHeight: "320px" }}>
+                  <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "1/1", minHeight: "200px" }}>
                     {curso.video ? (
                       <video
                         src={curso.video}

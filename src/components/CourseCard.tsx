@@ -8,7 +8,7 @@ export default function CourseCard({ curso }: { curso: Curso }) {
   return (
     <Link href={`/cursos/${curso.slug}`}>
       <Card className="group h-full overflow-hidden border-rose-100 hover:border-rose-300 hover:shadow-lg transition-all duration-300 bg-white">
-        <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "1/1", minHeight: "320px" }}>
+        <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "1/1", minHeight: "200px" }}>
           {curso.video ? (
             <video
               src={curso.video}
