@@ -1,12 +1,31 @@
 import { NextResponse } from "next/server"
 import { supabase } from "@/lib/supabase"
 
-const nomeParaSlug: Record<string, string> = {
-  "Saboaria Artesanal – Módulo 1": "saboaria-artesanal-modulo-1",
-  "Velas Artesanais – Apostila Completa": "velas-artesanais-completo",
-  "Cosméticos & Perfumaria Artesanal": "cosmeticos-perfumaria-completo",
-  "Faça & Lucre – Empreendedorismo Artesanal": "faca-lucre-empreendedorismo",
-}
+const cursosDoBlog: { slug: string; nomes: string[] }[] = [
+  {
+    slug: "saboaria-artesanal-modulo-1",
+    nomes: ["Saboaria Artesanal", "Saboaria Artesanal – Módulo 1"],
+  },
+  {
+    slug: "velas-artesanais-completo",
+    nomes: ["Velas Artesanais", "Velas Artesanais – Apostila Completa", "Velas Artesanais – Apostila"],
+  },
+  {
+    slug: "cosmeticos-perfumaria-completo",
+    nomes: ["Cosméticos & Perfumaria Artesanal", "Cosmeticos & Perfumaria Artesanal", "Cosméticos & Perfumaria", "Cosmeticos & Perfumaria"],
+  },
+  {
+    slug: "produtos-limpeza",
+    nomes: ["Produtos de Limpeza Artesanais", "Produtos de Limpeza"],
+  },
+]
+
+const normalizar = (texto: string) =>
+  texto
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "")
 
 export async function GET() {
   const { data: cursos, error } = await supabase
@@ -20,10 +39,13 @@ export async function GET() {
   const vagas: Record<string, { vagas_totais: number; vagas_preenchidas: number }> = {}
 
   for (const curso of cursos || []) {
-    const slug = nomeParaSlug[curso.nome]
-    if (slug) {
-      vagas[slug] = {
-        vagas_totais: curso.vagas,
+    const nomeNormalizado = normalizar(curso.nome)
+    const entrada = cursosDoBlog.find((c) =>
+      c.nomes.some((nome) => normalizar(nome) === nomeNormalizado)
+    )
+    if (entrada) {
+      vagas[entrada.slug] = {
+        vagas_totais: curso.vagas ?? 20,
         vagas_preenchidas: curso.alunos?.length ?? 0,
       }
     }

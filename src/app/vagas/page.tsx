@@ -10,7 +10,7 @@ const VAGAS_TOTAIS = 20
 
 export default function VagasPage() {
   const [selected, setSelected] = useState<string | null>(null)
-  const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, number> | null>(null)
+  const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, { vagas_totais: number; vagas_preenchidas: number }> | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -18,9 +18,9 @@ export default function VagasPage() {
       .then((r) => r.json())
       .then((data) => {
         if (data && !data.error) {
-          const map: Record<string, number> = {}
-          for (const [slug, info] of Object.entries(data) as [string, { vagas_preenchidas: number }][]) {
-            map[slug] = info.vagas_preenchidas
+          const map: Record<string, { vagas_totais: number; vagas_preenchidas: number }> = {}
+          for (const [slug, info] of Object.entries(data) as [string, { vagas_totais: number; vagas_preenchidas: number }][]) {
+            map[slug] = info
           }
           setVagasAoVivo(map)
         }
@@ -46,8 +46,10 @@ export default function VagasPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {cursos.map((curso) => {
-            const preenchidas = vagasAoVivo?.[curso.slug] ?? (loading ? 0 : 0)
-            const restantes = VAGAS_TOTAIS - preenchidas
+            const info = vagasAoVivo?.[curso.slug]
+            const total = info?.vagas_totais ?? VAGAS_TOTAIS
+            const preenchidas = info?.vagas_preenchidas ?? (loading ? 0 : 0)
+            const restantes = Math.max(0, total - preenchidas)
             const isSelected = selected === curso.id
 
             return (
@@ -97,13 +99,13 @@ export default function VagasPage() {
                       <div className="flex items-center justify-between text-xs text-rose-400 mb-1">
                         <span>VAGAS</span>
                         <span className="font-medium text-rose-600">
-                          {preenchidas}/{VAGAS_TOTAIS} PREENCHIDAS
+                          {preenchidas}/{total} PREENCHIDAS
                         </span>
                       </div>
                       <div className="w-full h-2 bg-rose-100 rounded-full overflow-hidden">
                         <div
                           className="h-full bg-gradient-to-r from-rose-400 to-pink-400 rounded-full transition-all duration-500"
-                          style={{ width: `${(preenchidas / VAGAS_TOTAIS) * 100}%` }}
+                          style={{ width: `${total > 0 ? (preenchidas / total) * 100 : 0}%` }}
                         />
                       </div>
                       <p className="text-[11px] text-rose-500 mt-1.5 font-medium">
