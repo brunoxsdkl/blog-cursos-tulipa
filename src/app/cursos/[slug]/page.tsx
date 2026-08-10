@@ -10,7 +10,7 @@ import CursoGaleria from "@/components/CursoGaleria"
 import CursoGaleriaLimpeza from "@/components/CursoGaleriaLimpeza"
 import CursoGaleriaCosmeticos from "@/components/CursoGaleriaCosmeticos"
 import CursoGaleriaVelas from "@/components/CursoGaleriaVelas"
-import { Clock, BarChart, CheckCircle, MessageCircle, GraduationCap, ArrowLeft } from "lucide-react"
+import { Clock, BarChart, CheckCircle, ArrowLeft } from "lucide-react"
 
 export async function generateStaticParams() {
   return cursos.map((curso) => ({ slug: curso.slug }))
@@ -76,25 +76,6 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
       {curso.slug === "produtos-limpeza" && <CursoGaleriaLimpeza />}
       {curso.slug === "cosmeticos-perfumaria-completo" && <CursoGaleriaCosmeticos />}
       {curso.slug === "velas-artesanais-completo" && <CursoGaleriaVelas />}
-
-      <div className="bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl p-6 sm:p-8 mb-12 text-white">
-        <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
-          <a
-            href="#"
-            className="inline-flex items-center justify-center gap-2 bg-white text-rose-600 hover:bg-rose-50 shadow-lg rounded-full px-8 py-2.5 text-sm font-medium transition-all w-full sm:w-auto"
-          >
-            <GraduationCap className="h-4 w-4" />
-            Quero me inscrever
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 rounded-full px-8 py-2.5 text-sm font-medium transition-all w-full sm:w-auto"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Falar no WhatsApp
-          </a>
-        </div>
-      </div>
 
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-rose-900 mb-6">
