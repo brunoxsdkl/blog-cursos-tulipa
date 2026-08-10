@@ -93,6 +93,12 @@ export default function Header() {
                 {cat.nome}
               </Link>
             ))}
+            <Link
+              href="/interesse"
+              className="text-sm uppercase tracking-[0.15em] font-medium text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 px-4 py-2 rounded-full shadow-lg shadow-rose-200 transition-all duration-300"
+            >
+              Quero fazer curso
+            </Link>
           </nav>
 
           <button
@@ -120,6 +126,13 @@ export default function Header() {
                 {cat.nome}
               </Link>
             ))}
+            <Link
+              href="/interesse"
+              onClick={() => setMobileOpen(false)}
+              className="px-4 py-3 text-white bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl text-sm uppercase tracking-wider"
+            >
+              Quero fazer curso
+            </Link>
           </div>
         </div>
       )}
