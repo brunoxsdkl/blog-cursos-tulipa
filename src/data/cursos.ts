@@ -97,7 +97,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
-        resposta: "Com certeza. Muitas alunas começaram vendendo para amigos e hoje mantêm uma renda extra mensal de R$ 800 a R$ 3.000 com saboaria artesanal.",
+        resposta: "Com certeza. Muitas alunas começaram vendendo para amigos e hoje mantêm uma renda extra mensal.",
       },
     ],
   },
