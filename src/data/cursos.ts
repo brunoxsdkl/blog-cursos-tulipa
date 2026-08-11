@@ -69,7 +69,7 @@ export const cursos: Curso[] = [
     beneficios: [
       "Sabonetes artesanais de alto padrão que se destacam no mercado",
       "Redução de custos com produção própria e insumos acessíveis",
-      "Produtos sustentáveis e veganos que atraem clientes conscientes",
+      "Produtos sustentáveis que atraem clientes conscientes",
       "Possibilidade de criar linhas exclusivas para datas sazonais",
       "Margem de lucro de até 300% sobre o custo de produção",
     ],
