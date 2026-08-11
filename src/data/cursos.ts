@@ -65,17 +65,7 @@ export const cursos: Curso[] = [
     video: "/saboaria.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
-    tecnicas: [
-      "Saponificação a frio – processo completo da reação química entre soda cáustica e óleos vegetais",
-      "Cálculo de receitas – uso de calculadora de soda para fórmulas precisas",
-      "Escolha de óleos e manteigas – propriedades de cada insumo na dureza, espuma e hidratação",
-      "Técnica de traço leve, médio e avançado para diferentes texturas",
-      "Uso de argilas e corantes naturais para coloração orgânica",
-      "Criação de blend de fragrâncias com óleos essenciais",
-      "Técnica de marmorizado e camadas para sabonetes decorados",
-      "Cura e armazenamento – tempo ideal e condições para cada tipo de sabonete",
-      "Embalagem criativa e precificação para venda",
-    ],
+    tecnicas: [],
     beneficios: [
       "Sabonetes artesanais de alto padrão que se destacam no mercado",
       "Redução de custos com produção própria e insumos acessíveis",
