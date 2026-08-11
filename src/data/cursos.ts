@@ -123,7 +123,6 @@ export const cursos: Curso[] = [
       "Técnica de camadas coloridas e mosaico",
       "Velas aromáticas terapêuticas com óleos essenciais",
       "Rótulos, embalagens e apresentação profissional para venda",
-      "Precificação e cálculo de custos para maximizar lucro",
     ],
     beneficios: [
       "Mercado em alta com clientes fiéis que buscam bem-estar e decoração",
