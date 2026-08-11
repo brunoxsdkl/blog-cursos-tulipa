@@ -12,6 +12,7 @@ export interface Curso {
   tecnicas: string[]
   produtosDestaque?: { nome: string; icone: string }[]
   beneficios: string[]
+  beneficioDestaque?: string
   faq: { pergunta: string; resposta: string }[]
 }
 
@@ -258,9 +259,9 @@ export const cursos: Curso[] = [
     beneficios: [
       "Fórmulas testadas e aprovadas que funcionam de verdade",
       "Margem de lucro de até 300% sobre cada produto",
-      "Curso presencial com duração de 4 horas",
       "Certificado digital de conclusão da Dona Tulipa",
     ],
+    beneficioDestaque: "Curso presencial com duração de 4 horas",
     faq: [
       {
         pergunta: "Preciso ter experiência?",

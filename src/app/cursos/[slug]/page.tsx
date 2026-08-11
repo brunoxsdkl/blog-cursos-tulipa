@@ -11,7 +11,6 @@ import CursoGaleriaLimpeza from "@/components/CursoGaleriaLimpeza"
 import CursoGaleriaCosmeticos from "@/components/CursoGaleriaCosmeticos"
 import CursoGaleriaVelas from "@/components/CursoGaleriaVelas"
 import { Clock, BarChart, CheckCircle, ArrowLeft, SprayCan, Droplets, Shirt, Sparkles, GlassWater, Brush, WashingMachine, Dog } from "lucide-react"
-
 const iconesProduto: Record<string, React.ComponentType<{ className?: string }>> = {
   spray: SprayCan,
   detergente: Droplets,
@@ -135,6 +134,18 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
           Benefícios do Curso
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {curso.beneficioDestaque && (
+            <div className="sm:col-span-2 p-5 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 border border-rose-200 text-white">
+              <div className="flex items-center gap-3">
+                <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20 border border-white/25">
+                  <Clock className="h-6 w-6 text-white animate-pulse" />
+                </span>
+                <span className="text-base font-semibold text-white">
+                  {curso.beneficioDestaque}
+                </span>
+              </div>
+            </div>
+          )}
           {curso.beneficios.map((ben, i) => (
             <div
               key={i}
