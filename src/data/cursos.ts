@@ -103,7 +103,7 @@ export const cursos: Curso[] = [
   },
   {
     id: "velas-artesanais",
-    titulo: "Velas Artesanais – Apostila Completa",
+    titulo: "Velas Artesanais – Módulo 1",
     slug: "velas-artesanais-completo",
     categoria: "velas-artesanais",
     categoriaNome: "Velas Artesanais",
@@ -157,7 +157,7 @@ export const cursos: Curso[] = [
   },
   {
     id: "cosmeticos-perfumaria",
-    titulo: "Cosméticos & Perfumaria",
+    titulo: "Cosméticos & Perfumaria – Módulo 1",
     slug: "cosmeticos-perfumaria-completo",
     categoria: "cosmeticos-perfumaria",
     categoriaNome: "Cosméticos & Perfumaria",

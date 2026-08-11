@@ -8,11 +8,11 @@ const cursosDoBlog: { slug: string; nomes: string[] }[] = [
   },
   {
     slug: "velas-artesanais-completo",
-    nomes: ["Velas Artesanais", "Velas Artesanais – Apostila Completa", "Velas Artesanais – Apostila"],
+    nomes: ["Velas Artesanais", "Velas Artesanais – Apostila Completa", "Velas Artesanais – Apostila", "Velas Artesanais – Módulo 1", "Velas Artesanais - Modulo 1"],
   },
   {
     slug: "cosmeticos-perfumaria-completo",
-    nomes: ["Cosméticos & Perfumaria Artesanal", "Cosmeticos & Perfumaria Artesanal", "Cosméticos & Perfumaria", "Cosmeticos & Perfumaria"],
+    nomes: ["Cosméticos & Perfumaria Artesanal", "Cosmeticos & Perfumaria Artesanal", "Cosméticos & Perfumaria", "Cosmeticos & Perfumaria", "Cosméticos & Perfumaria – Módulo 1", "Cosmeticos & Perfumaria - Modulo 1"],
   },
   {
     slug: "produtos-limpeza",
