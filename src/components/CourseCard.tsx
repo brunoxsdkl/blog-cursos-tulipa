@@ -3,6 +3,16 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Clock, BarChart } from "lucide-react"
 import type { Curso } from "@/data/cursos"
+import CourseCountdown from "./CourseCountdown"
+
+function proximaData(datas: string[]): string {
+  const now = Date.now()
+  const futuras = datas
+    .map((d) => new Date(d).getTime())
+    .filter((t) => t > now)
+    .sort((a, b) => a - b)
+  return new Date(futuras[0] ?? datas[0]).toISOString()
+}
 
 export default function CourseCard({ curso }: { curso: Curso }) {
   return (
@@ -37,15 +47,18 @@ export default function CourseCard({ curso }: { curso: Curso }) {
             {curso.descricao}
           </p>
         </CardContent>
-        <CardFooter className="px-5 pb-4 pt-0 flex items-center gap-4 text-xs text-rose-400">
-          <span className="flex items-center gap-1">
-            <BarChart className="h-3.5 w-3.5" />
-            {curso.nivel}
-          </span>
-          <span className="flex items-center gap-1">
-            <Clock className="h-3.5 w-3.5" />
-            {curso.tempoLeitura}
-          </span>
+        <CardFooter className="px-5 pb-4 pt-0 flex flex-col gap-4 text-xs text-rose-400">
+          <div className="flex items-center gap-4">
+            <span className="flex items-center gap-1">
+              <BarChart className="h-3.5 w-3.5" />
+              {curso.nivel}
+            </span>
+            <span className="flex items-center gap-1">
+              <Clock className="h-3.5 w-3.5" />
+              {curso.tempoLeitura}
+            </span>
+          </div>
+          <CourseCountdown date={proximaData(curso.datas)} />
         </CardFooter>
       </Card>
     </Link>

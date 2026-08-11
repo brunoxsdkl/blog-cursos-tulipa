@@ -13,6 +13,7 @@ export interface Curso {
   produtosDestaque?: { nome: string; icone: string }[]
   beneficios: string[]
   beneficioDestaque?: string
+  datas: string[]
   faq: { pergunta: string; resposta: string }[]
 }
 
@@ -83,6 +84,7 @@ export const cursos: Curso[] = [
       "Margem de lucro de até 300% sobre o custo de produção",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
+    datas: ["2026-10-31T13:00:00", "2026-11-28T13:00:00"],
     faq: [
       {
         pergunta: "Preciso ter experiência para começar?",
@@ -141,6 +143,7 @@ export const cursos: Curso[] = [
       "Lucro médio de 200% a 400% por unidade vendida",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
+    datas: ["2026-10-03T13:00:00", "2026-11-21T13:00:00"],
     faq: [
       {
         pergunta: "Preciso ter experiência?",
@@ -199,6 +202,7 @@ export const cursos: Curso[] = [
       "Fidelização de clientes que buscam produtos personalizados e livres de químicos agressivos",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
+    datas: ["2026-11-07T13:00:00"],
     faq: [
       {
         pergunta: "Preciso ter experiência?",
@@ -257,6 +261,7 @@ export const cursos: Curso[] = [
       "Certificado digital de conclusão da Dona Tulipa",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
+    datas: ["2026-10-17T13:00:00"],
     faq: [
       {
         pergunta: "Preciso ter experiência?",
