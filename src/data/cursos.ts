@@ -64,7 +64,7 @@ export const cursos: Curso[] = [
     imagem: "/images/saboaria.jpg",
     video: "/saboaria.mp4",
     nivel: "Iniciante",
-    tempoLeitura: "15 min",
+    tempoLeitura: "4 horas",
     tecnicas: [
       "Saponificação a frio – processo completo da reação química entre soda cáustica e óleos vegetais",
       "Cálculo de receitas – uso de calculadora de soda para fórmulas precisas",
@@ -122,7 +122,7 @@ export const cursos: Curso[] = [
     imagem: "/images/velas.jpg",
     video: "/velas.mp4",
     nivel: "Iniciante",
-    tempoLeitura: "12 min",
+    tempoLeitura: "4 horas",
     tecnicas: [
       "Escolha da cera ideal – parafina, soja, palma ou vegetal para cada tipo de vela",
       "Mechas e pavios – dimensão, posicionamento e tipo para queima perfeita",
@@ -178,7 +178,7 @@ export const cursos: Curso[] = [
     imagem: "/images/cosmeticos.jpg",
     video: "/cosmeticos.mp4",
     nivel: "Intermediário",
-    tempoLeitura: "18 min",
+    tempoLeitura: "4 horas",
     tecnicas: [
       "Cremes e loções hidratantes",
       "Conservantes e validade dos produtos",
@@ -237,7 +237,7 @@ export const cursos: Curso[] = [
     imagem: "/images/limpeza.jpg",
     video: "/limpeza.mp4",
     nivel: "Iniciante",
-    tempoLeitura: "15 min",
+    tempoLeitura: "4 horas",
     tecnicas: [
       "Higienização e segurança na manipulação de insumos",
       "Material de apoio",
