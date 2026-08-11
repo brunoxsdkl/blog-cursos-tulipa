@@ -186,14 +186,8 @@ export const cursos: Curso[] = [
     tempoLeitura: "18 min",
     tecnicas: [
       "Criação de bases para cremes e loções hidratantes",
-      "Bálsamos labiais nutritivos com manteigas vegetais",
-      "Perfumes sólidos e sprays com álcool de cereais",
-      "Óleos corporais perfumados e sais de banho",
-      "Emulsões – técnica de fase oleosa e aquosa",
       "Conservantes naturais e validade dos produtos",
       "Rotulagem conforme ANVISA para venda legal",
-      "Criação de linhas completas (dia, noite, cuidados específicos)",
-      "Embalagem sustentável e identidade visual para marca própria",
     ],
     produtosDestaque: [
       { nome: "Geleia de banho", icone: "banho" },
