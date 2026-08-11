@@ -245,7 +245,6 @@ export const cursos: Curso[] = [
       "Embalagem, rotulagem e validade dos produtos",
       "Medir pH dos produtos",
       "Adequação às normas da ANVISA para pequenos fabricantes",
-      "Estratégias de venda e divulgação dos produtos",
     ],
     beneficios: [
       "Fórmulas testadas e aprovadas que funcionam de verdade",
