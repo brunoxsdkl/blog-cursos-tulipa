@@ -12,7 +12,7 @@ export default function CursoFAQ({ curso }: { curso: Curso }) {
       <h2 className="text-2xl font-bold text-rose-900 mb-6">
         Perguntas Frequentes
       </h2>
-      <Accordion className="w-full">
+      <Accordion className="w-full" multiple>
         {curso.faq.map((item, i) => (
           <AccordionItem key={i} value={`faq-${i}`} className="border-rose-100">
             <AccordionTrigger className="text-rose-700 hover:text-rose-900 hover:no-underline text-left font-medium">
