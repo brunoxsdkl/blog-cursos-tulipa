@@ -185,8 +185,8 @@ export const cursos: Curso[] = [
     nivel: "Intermediário",
     tempoLeitura: "18 min",
     tecnicas: [
-      "Criação de bases para cremes e loções hidratantes",
-      "Conservantes naturais e validade dos produtos",
+      "Cremes e loções hidratantes",
+      "Conservantes e validade dos produtos",
       "Rotulagem conforme ANVISA para venda legal",
     ],
     produtosDestaque: [
