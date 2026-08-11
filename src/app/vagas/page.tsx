@@ -91,7 +91,7 @@ export default function VagasPage() {
                   </div>
 
                   <CardContent className="p-4">
-                    <h3 className="text-xs uppercase tracking-[0.1em] font-medium text-rose-800 mb-2 line-clamp-2">
+                    <h3 className="text-sm uppercase tracking-[0.15em] font-medium text-rose-700/90 mb-2 line-clamp-2">
                       {curso.titulo}
                     </h3>
 
