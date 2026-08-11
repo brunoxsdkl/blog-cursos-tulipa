@@ -151,7 +151,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
-        resposta: "Sim! Alunas relatam faturamento mensal entre R$ 1.200 e R$ 4.000 com vendas de velas artesanais.",
+        resposta: "Sim! Alunos relatam faturamento mensal entre R$ 1.200 e R$ 4.000 com vendas de velas artesanais.",
       },
     ],
   },
