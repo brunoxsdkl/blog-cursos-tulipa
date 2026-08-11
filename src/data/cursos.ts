@@ -285,7 +285,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Quanto posso lucrar?",
-        resposta: "Com baixo investimento inicial, é possível ter margens de lucro de até 300%. Muitas alunas já fazem da produção de limpeza sua renda principal.",
+        resposta: "Com baixo investimento inicial, é possível ter margens de lucro de até 300%. Muitos alunos já fazem da produção de limpeza sua renda principal.",
       },
     ],
   },
