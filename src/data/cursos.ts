@@ -115,7 +115,7 @@ export const cursos: Curso[] = [
     tempoLeitura: "4 horas",
     tecnicas: [
       "Escolha da cera ideal – parafina, soja, palma ou vegetal para cada tipo de vela",
-      "Mechas e pavios – dimensão, posicionamento e tipo para queima perfeita",
+      "Pavios – dimensão, posicionamento e tipo para queima perfeita",
       "Temperatura correta de derretimento e adição de fragrâncias",
       "Fixação de fragrâncias – blends que duram mais tempo na queima",
       "Velas em potes de vidro, alumínio e recipientes reutilizáveis",
