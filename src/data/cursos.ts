@@ -120,7 +120,7 @@ export const cursos: Curso[] = [
       "Fixação de fragrâncias – blends que duram mais tempo na queima",
       "Velas em potes de vidro, alumínio e recipientes reutilizáveis",
       "Velas esculturais e decorativas em silicone",
-      "Técnica de camadas coloridas e efeito areia",
+      "Técnica de camadas coloridas e mosaico",
       "Velas aromáticas terapêuticas com óleos essenciais",
       "Rótulos, embalagens e apresentação profissional para venda",
       "Precificação e cálculo de custos para maximizar lucro",
