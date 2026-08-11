@@ -126,7 +126,6 @@ export const cursos: Curso[] = [
     ],
     beneficios: [
       "Mercado em alta com clientes fiéis que buscam bem-estar e decoração",
-      "Produção de alto valor agregado com baixo custo de insumos",
       "Velas aromáticas são presentes perfeitos para datas comemorativas",
       "Possibilidade de criar linhas personalizadas por evento ou marca",
       "Lucro médio de 200% a 400% por unidade vendida",
