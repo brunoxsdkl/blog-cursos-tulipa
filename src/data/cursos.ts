@@ -60,7 +60,7 @@ export const cursos: Curso[] = [
     categoria: "saboaria-artesanal",
     categoriaNome: "Saboaria Artesanal",
     descricao:
-      "Aprenda do zero as técnicas fundamentais da saboaria artesanal. Este módulo aborda desde a escolha dos insumos até o processo completo de saponificação a frio, criando sabonetes únicos, sustentáveis e com alto valor agregado.",
+      "Aprenda a criar sabonetes artesanais do zero e transforme conhecimento em possibilidades de renda. Um curso prático e presencial, desenvolvido para quem deseja aprender as principais técnicas da saboaria artesanal, mesmo sem experiência anterior. Você vai aprender desde a escolha dos materiais e insumos até a produção, acabamento, embalagem, precificação e cuidados importantes para transformar sua produção artesanal em um produto com valor agregado.",
     imagem: "/images/saboaria.jpg",
     video: "/saboaria.mp4",
     nivel: "Iniciante",
