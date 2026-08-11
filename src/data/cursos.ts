@@ -82,6 +82,7 @@ export const cursos: Curso[] = [
       "Possibilidade de criar linhas exclusivas para datas sazonais",
       "Margem de lucro de até 300% sobre o custo de produção",
     ],
+    beneficioDestaque: "Curso presencial com duração de 4 horas",
     faq: [
       {
         pergunta: "Preciso ter experiência para começar?",
@@ -143,6 +144,7 @@ export const cursos: Curso[] = [
       "Possibilidade de criar linhas personalizadas por evento ou marca",
       "Lucro médio de 200% a 400% por unidade vendida",
     ],
+    beneficioDestaque: "Curso presencial com duração de 4 horas",
     faq: [
       {
         pergunta: "Preciso ter experiência?",
@@ -200,6 +202,7 @@ export const cursos: Curso[] = [
       "Possibilidade de criar marca própria com identidade única",
       "Fidelização de clientes que buscam produtos personalizados e livres de químicos agressivos",
     ],
+    beneficioDestaque: "Curso presencial com duração de 4 horas",
     faq: [
       {
         pergunta: "Preciso ter experiência?",
