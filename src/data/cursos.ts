@@ -174,7 +174,7 @@ export const cursos: Curso[] = [
   },
   {
     id: "cosmeticos-perfumaria",
-    titulo: "Cosméticos & Perfumaria Artesanal",
+    titulo: "Cosméticos & Perfumaria",
     slug: "cosmeticos-perfumaria-completo",
     categoria: "cosmeticos-perfumaria",
     categoriaNome: "Cosméticos & Perfumaria",
