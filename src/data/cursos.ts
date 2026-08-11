@@ -179,7 +179,7 @@ export const cursos: Curso[] = [
     tecnicas: [
       "Cremes e loções hidratantes",
       "Conservantes e validade dos produtos",
-      "Rotulagem conforme ANVISA para venda legal",
+      "Rotulagem C/lote e validade",
     ],
     produtosDestaque: [
       { nome: "Geleia de banho", icone: "banho" },
