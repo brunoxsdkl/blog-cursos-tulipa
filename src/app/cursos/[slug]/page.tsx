@@ -170,6 +170,59 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
 
       <Separator className="bg-rose-100 my-12" />
 
+      {curso.inclusos && curso.inclusos.length > 0 && (
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-rose-900 mb-6">O que está incluso</h2>
+          <div className="p-6 rounded-xl bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-100">
+            <p className="text-sm text-rose-600 mb-4">
+              Ao participar do curso, você recebe:
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {curso.inclusos.map((inc, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-rose-400 mt-0.5 shrink-0" />
+                  <span className="text-sm text-rose-700 leading-relaxed">{inc}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      <Separator className="bg-rose-100 my-12" />
+
+      {curso.professora && (
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-rose-900 mb-6">Quem vai te ensinar?</h2>
+          <div className="p-6 rounded-xl bg-white border border-rose-100 shadow-sm">
+            <div className="flex items-start gap-4 mb-4">
+              <div className="h-12 w-12 rounded-full bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center text-white text-lg font-bold shrink-0">
+                A
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-rose-900">{curso.professora.nome}</h3>
+                <p className="text-sm text-rose-500">{curso.professora.titulo}</p>
+              </div>
+            </div>
+            <p className="text-sm text-rose-700 leading-relaxed mb-4">{curso.professora.bio}</p>
+            {curso.professora.registros && curso.professora.registros.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-4">
+                {curso.professora.registros.map((reg, i) => (
+                  <span key={i} className="text-xs px-3 py-1 rounded-full bg-rose-50 border border-rose-100 text-rose-500 font-medium">
+                    {reg}
+                  </span>
+                ))}
+              </div>
+            )}
+            <p className="text-sm italic text-rose-600 font-medium">
+              “{curso.professora.frase}”
+            </p>
+          </div>
+        </section>
+      )}
+
+      <Separator className="bg-rose-100 my-12" />
+
       <CursoFAQ curso={curso} />
     </div>
   )

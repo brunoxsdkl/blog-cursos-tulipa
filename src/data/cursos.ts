@@ -13,6 +13,14 @@ export interface Curso {
   produtosDestaque?: { nome: string; icone: string }[]
   beneficios: string[]
   beneficioDestaque?: string
+  inclusos?: string[]
+  professora?: {
+    nome: string
+    titulo: string
+    bio: string
+    registros?: string[]
+    frase: string
+  }
   datas: string[]
   faq: { pergunta: string; resposta: string }[]
 }
@@ -60,12 +68,19 @@ export const cursos: Curso[] = [
     categoria: "saboaria-artesanal",
     categoriaNome: "Saboaria Artesanal",
     descricao:
-      "Aprenda a criar sabonetes artesanais do zero e transforme conhecimento em possibilidades de renda. Um curso prático e presencial, desenvolvido para quem deseja aprender as principais técnicas da saboaria artesanal, mesmo sem experiência anterior. Você vai aprender desde a escolha dos materiais e insumos até a produção, acabamento, embalagem, precificação e cuidados importantes para transformar sua produção artesanal em um produto com valor agregado.",
+      "Aprenda a transformar produção artesanal em oportunidade de renda. Você aprenderá os fundamentos de cálculo de custos, precificação e apresentação do produto, para entender como estruturar sua produção de forma mais profissional.",
     imagem: "/images/saboaria.jpg",
     video: "/saboaria.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
-    tecnicas: [],
+    tecnicas: [
+      "Fundamentos da Saboaria Artesanal – Conheça matérias-primas, utensílios, equipamentos e suas principais funções.",
+      "Técnicas de produção – Aprenda técnicas artesanais na prática, com acompanhamento durante toda a produção.",
+      "Cores, fragrâncias e acabamento – Aprenda como combinar elementos para criar sabonetes bonitos, aromáticos e comercialmente atrativos.",
+      "Acabamento e embalagem – Veja como apresentar seu produto de maneira profissional e valorizar sua criação.",
+      "Custo e precificação – Aprenda a calcular o custo de produção e estabelecer um preço de venda adequado.",
+      "Noções para comercialização – Orientações iniciais para quem deseja transformar a saboaria em uma fonte de renda.",
+    ],
     beneficios: [
       "Sabonetes artesanais de alto padrão que se destacam no mercado",
       "Redução de custos com produção própria e insumos acessíveis",
@@ -74,6 +89,23 @@ export const cursos: Curso[] = [
       "Margem de lucro de até 300% sobre o custo de produção",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
+    inclusos: [
+      "Apostila do curso",
+      "Todos os materiais utilizados na aula prática",
+      "Produção dos produtos durante o curso",
+      "Coffee break",
+      "Orientações da professora",
+      "Certificado digital de conclusão",
+      "Conhecimento para continuar produzindo após o curso",
+    ],
+    professora: {
+      nome: "Andréia Freitas",
+      titulo: "Química • Aromaterapeuta • Graduanda em Estética e Cosmética",
+      bio: "Química e Aromaterapeuta, com experiência prática no desenvolvimento e produção de produtos artesanais e atuação na área de ensino. Atualmente, amplia sua formação acadêmica na área de Estética e Cosmética pela Faculdade Pequeno Príncipe, unindo conhecimento químico, formação continuada e experiência prática.",
+      registros: ["CRQ 09.403.803 – 9ª Região", "CRTH 10617"],
+      frase:
+        "Conhecimento que vai além da receita: técnica, prática e responsabilidade na produção artesanal.",
+    },
     datas: ["2026-10-31T13:00:00", "2026-11-28T13:00:00"],
     faq: [
       {
@@ -87,9 +119,9 @@ export const cursos: Curso[] = [
           "Sim! Todo o material necessário para a prática durante o curso está incluso no valor. Você produzirá seu próprio produto e levará para casa o resultado final.",
       },
       {
-        pergunta: "Posso vender os produtos depois?",
+        pergunta: "Posso comercializar os produtos que aprender no curso?",
         resposta:
-          "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. Todos os cursos são voltados para geração de renda. Você aprende técnicas profissionais e ainda recebe orientações sobre precificação, embalagem e divulgação.",
+          "O curso apresenta técnicas de produção artesanal e também orientações iniciais sobre custos, precificação, embalagem e comercialização. A venda dos produtos deve sempre observar a legislação sanitária vigente, as regras aplicáveis ao tipo de produto e as exigências dos órgãos competentes. A Lei Federal nº 15.154/2025 estabeleceu previsão de regras simplificadas para determinados produtos artesanais, observada a regulamentação sanitária aplicável.",
       },
       {
         pergunta: "Recebo certificado?",
