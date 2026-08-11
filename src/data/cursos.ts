@@ -225,10 +225,6 @@ export const cursos: Curso[] = [
         resposta: "Sim, certificado digital de conclusão da Dona Tulipa.",
       },
       {
-        pergunta: "Quanto consigo produzir?",
-        resposta: "Depende da linha. Com um lote de hidratante você produz 20 a 30 unidades. Perfumes rendem de 15 a 25 frascos por lote.",
-      },
-      {
         pergunta: "Esse curso serve para gerar renda?",
         resposta: "Sim. Alunas faturaram de R$ 1.500 a R$ 5.000 mensais com cosméticos artesanais em feiras e redes sociais.",
       },
