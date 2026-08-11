@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-rose-800 mb-3">Contato</h4>
             <ul className="space-y-2">
-              <li className="text-sm text-rose-500">contato@donatulipa.com.br</li>
+              <li className="text-sm text-rose-500">andreia.tulipa@hotmail.com</li>
               <li className="text-sm text-rose-500">@donatulipa</li>
             </ul>
           </div>
