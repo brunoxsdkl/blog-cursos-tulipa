@@ -195,6 +195,16 @@ export const cursos: Curso[] = [
       "Criação de linhas completas (dia, noite, cuidados específicos)",
       "Embalagem sustentável e identidade visual para marca própria",
     ],
+    produtosDestaque: [
+      { nome: "Geleia de banho", icone: "banho" },
+      { nome: "Loção hidratante", icone: "hidratante" },
+      { nome: "Sais de chuveiro", icone: "chuveiro" },
+      { nome: "Sais de banho", icone: "sais" },
+      { nome: "Pasta esfoliante hidratante", icone: "esfoliante" },
+      { nome: "Perfume", icone: "perfume" },
+      { nome: "Sachê de gaveta", icone: "sache" },
+      { nome: "Aromatizador de vareta", icone: "aroma" },
+    ],
     beneficios: [
       "Produtos com alta procura e clientes dispostos a pagar mais por cosméticos naturais",
       "Ingredientes acessíveis e rendimento de até 90% de lucro por unidade",

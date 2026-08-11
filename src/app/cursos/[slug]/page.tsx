@@ -10,7 +10,7 @@ import CursoGaleria from "@/components/CursoGaleria"
 import CursoGaleriaLimpeza from "@/components/CursoGaleriaLimpeza"
 import CursoGaleriaCosmeticos from "@/components/CursoGaleriaCosmeticos"
 import CursoGaleriaVelas from "@/components/CursoGaleriaVelas"
-import { Clock, BarChart, CheckCircle, ArrowLeft, SprayCan, Droplets, Shirt, Sparkles, GlassWater, Brush, WashingMachine, Dog } from "lucide-react"
+import { Clock, BarChart, CheckCircle, ArrowLeft, SprayCan, Droplets, Shirt, Sparkles, GlassWater, Brush, WashingMachine, Dog, Bath, Waves, Package, TestTube } from "lucide-react"
 const iconesProduto: Record<string, React.ComponentType<{ className?: string }>> = {
   spray: SprayCan,
   detergente: Droplets,
@@ -20,6 +20,14 @@ const iconesProduto: Record<string, React.ComponentType<{ className?: string }>>
   multiuso: Brush,
   lava: WashingMachine,
   canil: Dog,
+  banho: Bath,
+  hidratante: Droplets,
+  chuveiro: Waves,
+  sais: Sparkles,
+  esfoliante: Brush,
+  perfume: SprayCan,
+  sache: Package,
+  aroma: TestTube,
 }
 
 export async function generateStaticParams() {
