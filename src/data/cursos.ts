@@ -93,7 +93,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Recebo certificado?",
-        resposta: "Sim. Ao concluir o módulo, você recebe um certificado digital de conclusão reconhecido pela Dona Tulipa.",
+        resposta: "Sim, ao concluir o curso.",
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
@@ -149,7 +149,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Recebo certificado?",
-        resposta: "Sim, certificado digital de conclusão reconhecido pela Dona Tulipa.",
+        resposta: "Sim, ao concluir o curso.",
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
@@ -208,7 +208,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Recebo certificado?",
-        resposta: "Sim, certificado digital de conclusão da Dona Tulipa.",
+        resposta: "Sim, ao concluir o curso.",
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
@@ -267,7 +267,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Recebo certificado?",
-        resposta: "Sim, certificado digital de conclusão da Dona Tulipa.",
+        resposta: "Sim, ao concluir o curso.",
       },
       {
         pergunta: "Esses produtos seguem a ANVISA?",
