@@ -104,10 +104,6 @@ export const cursos: Curso[] = [
         resposta: "Sim. Ao concluir o módulo, você recebe um certificado digital de conclusão reconhecido pela Dona Tulipa.",
       },
       {
-        pergunta: "Quanto consigo produzir por lote?",
-        resposta: "Com as receitas do curso, você produz de 6 a 12 sabonetes por lote, dependendo da técnica. Com prática, consegue escalar para produção comercial.",
-      },
-      {
         pergunta: "Esse curso serve para gerar renda?",
         resposta: "Com certeza. Muitas alunas começaram vendendo para amigos e hoje mantêm uma renda extra mensal de R$ 800 a R$ 3.000 com saboaria artesanal.",
       },
@@ -161,10 +157,6 @@ export const cursos: Curso[] = [
       {
         pergunta: "Recebo certificado?",
         resposta: "Sim, certificado digital de conclusão reconhecido pela Dona Tulipa.",
-      },
-      {
-        pergunta: "Quanto consigo produzir?",
-        resposta: "Com um lote básico você produz de 10 a 20 velas. Conforme escala, pode chegar a 100 velas por semana.",
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
