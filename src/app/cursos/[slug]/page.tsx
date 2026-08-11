@@ -10,7 +10,18 @@ import CursoGaleria from "@/components/CursoGaleria"
 import CursoGaleriaLimpeza from "@/components/CursoGaleriaLimpeza"
 import CursoGaleriaCosmeticos from "@/components/CursoGaleriaCosmeticos"
 import CursoGaleriaVelas from "@/components/CursoGaleriaVelas"
-import { Clock, BarChart, CheckCircle, ArrowLeft } from "lucide-react"
+import { Clock, BarChart, CheckCircle, ArrowLeft, SprayCan, Droplets, Shirt, Sparkles, GlassWater, Brush, WashingMachine, Dog } from "lucide-react"
+
+const iconesProduto: Record<string, React.ComponentType<{ className?: string }>> = {
+  spray: SprayCan,
+  detergente: Droplets,
+  shirt: Shirt,
+  sparkles: Sparkles,
+  glass: GlassWater,
+  multiuso: Brush,
+  lava: WashingMachine,
+  canil: Dog,
+}
 
 export async function generateStaticParams() {
   return cursos.map((curso) => ({ slug: curso.slug }))
@@ -82,6 +93,29 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
           O que você vai aprender
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {curso.produtosDestaque && curso.produtosDestaque.length > 0 && (
+            <div className="sm:col-span-2 p-5 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 border border-rose-200 text-white">
+              <h3 className="text-base font-bold text-white mb-4">
+                Produtos que você vai aprender a fazer
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                {curso.produtosDestaque.map((prod, i) => {
+                  const Icone = iconesProduto[prod.icone] ?? Sparkles
+                  return (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 p-2.5 rounded-lg bg-white/15 border border-white/25"
+                    >
+                      <Icone className="h-5 w-5 shrink-0 text-white" />
+                      <span className="text-sm font-medium text-white leading-tight">
+                        {prod.nome}
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
           {curso.tecnicas.map((tec, i) => (
             <div
               key={i}

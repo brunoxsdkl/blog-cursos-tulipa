@@ -10,6 +10,7 @@ export interface Curso {
   nivel: "Iniciante" | "Intermediário" | "Avançado"
   tempoLeitura: string
   tecnicas: string[]
+  produtosDestaque?: { nome: string; icone: string }[]
   beneficios: string[]
   faq: { pergunta: string; resposta: string }[]
 }
@@ -239,11 +240,20 @@ export const cursos: Curso[] = [
     tempoLeitura: "15 min",
     tecnicas: [
       "Higienização e segurança na manipulação de insumos",
-      "Multiuso - Lava roupas - Limpa canil",
       "Material de apoio",
       "Fragrâncias e coloração para produtos de limpeza",
       "Embalagem, rotulagem e validade dos produtos",
       "Medir pH dos produtos",
+    ],
+    produtosDestaque: [
+      { nome: "Desinfetante c/ essência", icone: "spray" },
+      { nome: "Detergente", icone: "detergente" },
+      { nome: "Amaciante de roupas", icone: "shirt" },
+      { nome: "Alvejante s/ cloro", icone: "sparkles" },
+      { nome: "Limpa vidros", icone: "glass" },
+      { nome: "Multiuso", icone: "multiuso" },
+      { nome: "Lava roupas", icone: "lava" },
+      { nome: "Limpa canil", icone: "canil" },
     ],
     beneficios: [
       "Fórmulas testadas e aprovadas que funcionam de verdade",
