@@ -97,7 +97,7 @@ export const cursos: Curso[] = [
       {
         pergunta: "Posso vender os produtos depois?",
         resposta:
-          "Sim! Todos os cursos são voltados para geração de renda. Você aprende técnicas profissionais e ainda recebe orientações sobre precificação, embalagem e divulgação.",
+          "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. Todos os cursos são voltados para geração de renda. Você aprende técnicas profissionais e ainda recebe orientações sobre precificação, embalagem e divulgação.",
       },
       {
         pergunta: "Recebo certificado?",
@@ -156,7 +156,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Posso vender os produtos depois?",
-        resposta: "Sim! O curso é focado em empreendedorismo. Você aprenderá a precificar, embalar e divulgar suas velas.",
+        resposta: "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. O curso é focado em empreendedorismo. Você aprenderá a precificar, embalar e divulgar suas velas.",
       },
       {
         pergunta: "Recebo certificado?",
@@ -218,7 +218,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Posso vender os produtos depois?",
-        resposta: "Sim. Você aprende a regularizar seus produtos conforme a ANVISA e a criar uma marca profissional.",
+        resposta: "Sim. Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. Você aprende a regularizar seus produtos conforme a ANVISA e a criar uma marca profissional.",
       },
       {
         pergunta: "Recebo certificado?",
@@ -280,7 +280,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Posso vender os produtos depois?",
-        resposta: "Sim! O curso ensina não só a produzir, mas também a precificar, embalar e vender seus produtos de limpeza.",
+        resposta: "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. O curso ensina não só a produzir, mas também a precificar, embalar e vender seus produtos de limpeza.",
       },
       {
         pergunta: "Recebo certificado?",
