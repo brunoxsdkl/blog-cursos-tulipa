@@ -14,6 +14,9 @@ export interface Curso {
   beneficios: string[]
   beneficioDestaque?: string
   inclusos?: string[]
+  descricaoLonga?: string[]
+  ctaSubtitulo?: string
+  proximosModulos?: string[]
   professora?: {
     nome: string
     titulo: string
@@ -68,7 +71,18 @@ export const cursos: Curso[] = [
     categoria: "saboaria-artesanal",
     categoriaNome: "Saboaria Artesanal",
     descricao:
-      "Aprenda a transformar produção artesanal em oportunidade de renda. Você aprenderá os fundamentos de cálculo de custos, precificação e apresentação do produto, para entender como estruturar sua produção de forma mais profissional.",
+      "Aprenda a criar sabonetes artesanais do zero e transforme conhecimento em possibilidades de renda.",
+    descricaoLonga: [
+      "Aprenda a criar sabonetes artesanais do zero e transforme conhecimento em possibilidades de renda.",
+      "Um curso prático e presencial, desenvolvido para quem deseja aprender as principais técnicas da saboaria artesanal, mesmo sem experiência anterior.",
+      "Você vai aprender desde a escolha dos materiais e insumos até a produção, acabamento, embalagem, precificação e cuidados importantes para transformar sua produção artesanal em um produto com valor agregado.",
+    ],
+    ctaSubtitulo: "MÓDULO 1 - DO ZÉRO A PRIMEIRA PRODUÇÃO",
+    proximosModulos: [
+      "MÓDULO 2 - SABOARIA FITOTERÁPICA",
+      "MÓDULO 3 - SABOARIA NATALINA",
+      "MÓDULO 4 - SABOARIA AVANÇADA",
+    ],
     imagem: "/images/saboaria.jpg",
     video: "/saboaria.mp4",
     nivel: "Iniciante",
@@ -86,7 +100,6 @@ export const cursos: Curso[] = [
       "Redução de custos com produção própria e insumos acessíveis",
       "Produtos sustentáveis que atraem clientes conscientes",
       "Possibilidade de criar linhas exclusivas para datas sazonais",
-      "Margem de lucro de até 300% sobre o custo de produção",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
     inclusos: [

@@ -88,6 +88,15 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
         <p className="text-lg text-rose-600 leading-relaxed">
           {curso.descricao}
         </p>
+        {curso.descricaoLonga && curso.descricaoLonga.length > 1 && (
+          <div className="mt-4 space-y-3">
+            {curso.descricaoLonga.slice(1).map((par, i) => (
+              <p key={i} className="text-lg text-rose-600 leading-relaxed">
+                {par}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
 
       {curso.slug === "saboaria-artesanal-modulo-1" && <CursoGaleria />}
@@ -173,15 +182,15 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
       {curso.inclusos && curso.inclusos.length > 0 && (
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-rose-900 mb-6">O que está incluso</h2>
-          <div className="p-6 rounded-xl bg-gradient-to-br from-rose-50 to-pink-50 border border-rose-100">
-            <p className="text-sm text-rose-600 mb-4">
+          <div className="p-8 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 border border-rose-200 text-white shadow-lg shadow-rose-200/50">
+            <p className="text-base text-white/90 mb-6">
               Ao participar do curso, você recebe:
             </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {curso.inclusos.map((inc, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-rose-400 mt-0.5 shrink-0" />
-                  <span className="text-sm text-rose-700 leading-relaxed">{inc}</span>
+                <li key={i} className="flex items-start gap-3 bg-white/15 border border-white/25 rounded-lg p-3">
+                  <CheckCircle className="h-5 w-5 text-white mt-0.5 shrink-0" />
+                  <span className="text-sm text-white leading-relaxed">{inc}</span>
                 </li>
               ))}
             </ul>
@@ -224,6 +233,37 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
       <Separator className="bg-rose-100 my-12" />
 
       <CursoFAQ curso={curso} />
+
+      {curso.ctaSubtitulo && curso.proximosModulos && curso.proximosModulos.length > 0 && (
+        <section className="mt-12">
+          <div className="p-8 rounded-xl bg-gradient-to-br from-rose-600 to-pink-600 border border-rose-200 text-white text-center shadow-lg shadow-rose-300/40">
+            <p className="text-2xl font-bold mb-3">
+              Pronta para colocar a mão na massa?
+            </p>
+            <p className="text-base uppercase tracking-[0.15em] font-semibold mb-1 text-white/90">
+              {curso.categoriaNome}
+            </p>
+            <p className="text-sm uppercase tracking-[0.15em] text-white/80 mb-8">
+              {curso.ctaSubtitulo}
+            </p>
+            <div className="max-w-xl mx-auto">
+              <p className="text-xs uppercase tracking-[0.2em] text-white/70 mb-3">
+                Próximos módulos que teremos:
+              </p>
+              <div className="flex flex-col gap-2">
+                {curso.proximosModulos.map((mod, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-2 text-sm font-medium text-white"
+                  >
+                    {mod}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   )
 }
