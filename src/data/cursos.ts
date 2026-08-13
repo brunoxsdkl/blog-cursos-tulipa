@@ -63,7 +63,7 @@ export const categorias: { slug: CategoriaSlug; nome: string; descricao: string 
 export const cursos: Curso[] = [
   {
     id: "saboaria-modulo-1",
-    titulo: "Saboaria Artesanal – Módulo 1",
+    titulo: "FORMAÇÃO DONA TULIPA - Saboaria Artesanal – Módulo 1",
     slug: "saboaria-artesanal-modulo-1",
     categoria: "saboaria-artesanal",
     categoriaNome: "Saboaria Artesanal",
@@ -136,7 +136,7 @@ export const cursos: Curso[] = [
   },
   {
     id: "velas-artesanais",
-    titulo: "Velas Artesanais – Módulo 1",
+    titulo: "FORMAÇÃO DONA TULIPA - Velas Artesanais – Módulo 1",
     slug: "velas-artesanais-completo",
     categoria: "velas-artesanais",
     categoriaNome: "Velas Artesanais",
@@ -190,7 +190,7 @@ export const cursos: Curso[] = [
   },
   {
     id: "cosmeticos-perfumaria",
-    titulo: "Cosméticos & Perfumaria – Módulo 1",
+    titulo: "FORMAÇÃO DONA TULIPA - Cosméticos & Perfumaria – Módulo 1",
     slug: "cosmeticos-perfumaria-completo",
     categoria: "cosmeticos-perfumaria",
     categoriaNome: "Cosméticos & Perfumaria",
@@ -249,7 +249,7 @@ export const cursos: Curso[] = [
   },
   {
     id: "produtos-limpeza",
-    titulo: "Produtos de Limpeza",
+    titulo: "FORMAÇÃO DONA TULIPA - Produtos de Limpeza",
     slug: "produtos-limpeza",
     categoria: "produtos-limpeza",
     categoriaNome: "Produtos de Limpeza",

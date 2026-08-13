@@ -12,9 +12,9 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-rose-800 mb-3">Cursos</h4>
             <ul className="space-y-2">
               <li><a href="/interesse" className="text-sm font-semibold text-rose-600 hover:text-rose-800 transition-colors">Quero fazer um curso</a></li>
-              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Saboaria Artesanal</li>
-              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Velas Artesanais</li>
-              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Cosméticos & Perfumaria</li>
+              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">FORMAÇÃO DONA TULIPA - Saboaria Artesanal</li>
+              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">FORMAÇÃO DONA TULIPA - Velas Artesanais</li>
+              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">FORMAÇÃO DONA TULIPA - Cosméticos & Perfumaria</li>
               <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Faça & Lucre</li>
             </ul>
           </div>
