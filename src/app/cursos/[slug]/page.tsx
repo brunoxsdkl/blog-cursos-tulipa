@@ -82,9 +82,14 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
           </Badge>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rose-900 leading-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rose-900 leading-tight mb-3">
           {curso.titulo}
         </h1>
+        {curso.subtitulo && (
+          <p className="text-base sm:text-lg uppercase tracking-[0.15em] text-rose-500 font-medium mb-4">
+            {curso.subtitulo}
+          </p>
+        )}
         <p className="text-lg text-rose-600 leading-relaxed">
           {curso.descricao}
         </p>
@@ -104,10 +109,38 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
       {curso.slug === "cosmeticos-perfumaria-completo" && <CursoGaleriaCosmeticos />}
       {curso.slug === "velas-artesanais-completo" && <CursoGaleriaVelas />}
 
+      {curso.faixaDestaque && (
+        <div className="mb-12 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 border border-rose-200 text-white px-6 py-5 text-center shadow-lg shadow-rose-200/50">
+          <p className="text-base sm:text-lg font-bold uppercase tracking-[0.15em]">
+            ✨ {curso.faixaDestaque}
+          </p>
+        </div>
+      )}
+
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-rose-900 mb-6">
           O que você vai aprender
         </h2>
+        {curso.aprendizado && curso.aprendizado.length > 0 ? (
+          <div className="space-y-6">
+            {curso.aprendizado.map((bloco, bi) => (
+              <div key={bi} className="rounded-xl bg-rose-50/50 border border-rose-100 p-6">
+                <h3 className="flex items-center gap-2 text-base font-bold text-rose-900 uppercase tracking-[0.08em] mb-4">
+                  <span className="text-xl">{bloco.icone}</span>
+                  {bloco.titulo}
+                </h3>
+                <ul className="space-y-2.5">
+                  {bloco.itens.map((item, ii) => (
+                    <li key={ii} className="flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-rose-400 mt-0.5 shrink-0" />
+                      <span className="text-sm text-rose-700 leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {curso.produtosDestaque && curso.produtosDestaque.length > 0 && (
             <div className="sm:col-span-2 p-5 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 border border-rose-200 text-white">
@@ -132,7 +165,7 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
               </div>
             </div>
           )}
-          {curso.tecnicas.map((tec, i) => (
+          {curso.tecnicas && curso.tecnicas.map((tec, i) => (
             <div
               key={i}
               className="flex items-start gap-3 p-4 bg-rose-50/50 rounded-xl border border-rose-100"
@@ -142,7 +175,16 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
             </div>
           ))}
         </div>
+        )}
       </section>
+
+      {curso.fraseImpacto && (
+        <div className="mb-12 p-6 rounded-xl bg-white border border-rose-100 shadow-sm">
+          <p className="text-lg italic text-rose-700 font-medium text-center leading-relaxed">
+            “{curso.fraseImpacto}”
+          </p>
+        </div>
+      )}
 
       <Separator className="bg-rose-100 my-12" />
 

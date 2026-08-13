@@ -9,7 +9,7 @@ export interface Curso {
   video?: string
   nivel: "Iniciante" | "Intermediário" | "Avançado"
   tempoLeitura: string
-  tecnicas: string[]
+  tecnicas?: string[]
   produtosDestaque?: { nome: string; icone: string }[]
   beneficios: string[]
   beneficioDestaque?: string
@@ -17,6 +17,11 @@ export interface Curso {
   descricaoLonga?: string[]
   ctaSubtitulo?: string
   proximosModulos?: string[]
+  subtitulo?: string
+  faixaDestaque?: string
+  fraseImpacto?: string
+  aprendizado?: { icone: string; titulo: string; itens: string[] }[]
+  tecnicasPraticas?: { numero: string; nome: string; descricao: string }[]
   professora?: {
     nome: string
     titulo: string
@@ -149,7 +154,11 @@ export const cursos: Curso[] = [
   },
   {
     id: "velas-artesanais",
-    titulo: "FORMAÇÃO DONA TULIPA - Velas Artesanais – Módulo 1",
+    titulo: "FORMAÇÃO DONA TULIPA - Velas Artesanais",
+    subtitulo: "Módulo 1 | Fundamentos e Técnicas Essenciais",
+    faixaDestaque: "1 MÓDULO | 6 TÉCNICAS | MUITA PRÁTICA | CONHECIMENTO TÉCNICO",
+    fraseImpacto:
+      "Aqui você não aprende apenas a fazer velas. Você aprende a entender o processo, escolher os materiais e dominar diferentes técnicas para criar produtos com acabamento e identidade.",
     slug: "velas-artesanais-completo",
     categoria: "velas-artesanais",
     categoriaNome: "Velas Artesanais",
@@ -159,16 +168,33 @@ export const cursos: Curso[] = [
     video: "/velas.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
-    tecnicas: [
-      "Escolha da cera ideal – parafina, soja, palma ou vegetal para cada tipo de vela",
-      "Pavios – dimensão, posicionamento e tipo para queima perfeita",
-      "Temperatura correta de derretimento e adição de fragrâncias",
-      "Fixação de fragrâncias – blends que duram mais tempo na queima",
-      "Velas em potes de vidro, alumínio e recipientes reutilizáveis",
-      "Velas esculturais e decorativas em silicone",
-      "Técnica de camadas coloridas e mosaico",
-      "Velas aromáticas terapêuticas com óleos essenciais",
-      "Rótulos, embalagens e apresentação profissional para venda",
+    aprendizado: [
+      {
+        icone: "🔬",
+        titulo: "CONHECIMENTO DAS MATÉRIAS-PRIMAS",
+        itens: [
+          "Principais tipos de ceras e suas características",
+          "Escolha da matéria-prima de acordo com o tipo de vela",
+          "Corantes: como utilizar e incorporar corretamente",
+          "Essências: quantidade, aplicação e cuidados",
+          "Óleos essenciais: utilização e particularidades",
+          "Pavios: escolha, posicionamento e aplicação",
+          "Equipamentos e recipientes adequados para o derretimento",
+          "Cuidados e boas práticas durante a produção",
+        ],
+      },
+      {
+        icone: "🕯️",
+        titulo: "PARTE PRÁTICA 6 TÉCNICAS",
+        itens: [
+          "Vela Piloto – A base para compreender o processo de fabricação e os principais fundamentos de uma vela artesanal.",
+          "Vela com Especiarias – Uma técnica diferenciada que combina estética, textura e elementos decorativos.",
+          "Vela Mosaico – Aprenda a trabalhar diferentes cores e elementos para criar um efeito visual sofisticado.",
+          "Vela Luminária – Uma técnica decorativa que transforma a vela em uma verdadeira peça de ambientação.",
+          "Vela de Massagem – Aprenda a produzir uma vela destinada à aplicação corporal, trabalhando uma composição de origem natural.",
+          "Vela Gel Aquário – Uma técnica encantadora utilizando vela gel e elementos decorativos para criar o famoso efeito aquário.",
+        ],
+      },
     ],
     beneficios: [
       "Mercado em alta com clientes fiéis que buscam bem-estar e decoração",
