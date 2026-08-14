@@ -71,7 +71,7 @@ export const categorias: { slug: CategoriaSlug; nome: string; descricao: string 
 export const cursos: Curso[] = [
   {
     id: "saboaria-modulo-1",
-    titulo: "FORMAÇÃO DONA TULIPA - Saboaria Artesanal – Módulo 1",
+    titulo: "FORMAÇÃO DONA TULIPA: Saboaria Artesanal – Módulo 1",
     slug: "saboaria-artesanal-modulo-1",
     categoria: "saboaria-artesanal",
     categoriaNome: "Saboaria Artesanal",
@@ -82,23 +82,23 @@ export const cursos: Curso[] = [
       "Um curso prático e presencial, desenvolvido para quem deseja aprender as principais técnicas da saboaria artesanal, mesmo sem experiência anterior.",
       "Você vai aprender desde a escolha dos materiais e insumos até a produção, acabamento, embalagem, precificação e cuidados importantes para transformar sua produção artesanal em um produto com valor agregado.",
     ],
-    ctaSubtitulo: "MÓDULO 1 - DO ZÉRO A PRIMEIRA PRODUÇÃO",
+    ctaSubtitulo: "MÓDULO 1: DO ZERO A PRIMEIRA PRODUÇÃO",
     proximosModulos: [
-      "MÓDULO 2 - SABOARIA FITOTERÁPICA",
-      "MÓDULO 3 - SABOARIA NATALINA",
-      "MÓDULO 4 - SABOARIA AVANÇADA",
+      "MÓDULO 2: SABOARIA FITOTERÁPICA",
+      "MÓDULO 3: SABOARIA NATALINA",
+      "MÓDULO 4: SABOARIA AVANÇADA",
     ],
     imagem: "/images/saboaria.jpg",
     video: "/saboaria.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
     tecnicas: [
-      "Fundamentos da Saboaria Artesanal – Conheça matérias-primas, utensílios, equipamentos e suas principais funções.",
-      "Técnicas de produção – Aprenda técnicas artesanais na prática, com acompanhamento durante toda a produção.",
-      "Cores, fragrâncias e acabamento – Aprenda como combinar elementos para criar sabonetes bonitos, aromáticos e comercialmente atrativos.",
-      "Acabamento e embalagem – Veja como apresentar seu produto de maneira profissional e valorizar sua criação.",
-      "Custo e precificação – Aprenda a calcular o custo de produção e estabelecer um preço de venda adequado.",
-      "Noções para comercialização – Orientações iniciais para quem deseja transformar a saboaria em uma fonte de renda.",
+      "Fundamentos da Saboaria Artesanal: conheça matérias-primas, utensílios, equipamentos e suas principais funções.",
+      "Técnicas de produção: aprenda técnicas artesanais na prática, com acompanhamento durante toda a produção.",
+      "Cores, fragrâncias e acabamento: aprenda como combinar elementos para criar sabonetes bonitos, aromáticos e comercialmente atrativos.",
+      "Acabamento e embalagem: veja como apresentar seu produto de maneira profissional e valorizar sua criação.",
+      "Custo e precificação: aprenda a calcular o custo de produção e estabelecer um preço de venda adequado.",
+      "Noções para comercialização: orientações iniciais para quem deseja transformar a saboaria em uma fonte de renda.",
     ],
     beneficios: [
       "Sabonetes artesanais de alto padrão que se destacam no mercado",
@@ -148,7 +148,7 @@ export const cursos: Curso[] = [
       {
         pergunta: "Esse curso serve para gerar renda?",
         resposta:
-          "Você não precisa saber fazer sabonetes para começar. Você precisa aprender da maneira certa. No Saboaria Artesanal – Módulo 1, você terá contato com as técnicas, materiais e conhecimentos fundamentais para começar a produzir seus próprios sabonetes artesanais e dar os primeiros passos nesse universo.",
+          "Você não precisa saber fazer sabonetes para começar. Você precisa aprender da maneira certa. Na Saboaria Artesanal – Módulo 1, você terá contato com as técnicas, materiais e conhecimentos fundamentais para começar a produzir seus próprios sabonetes artesanais e dar os primeiros passos nesse universo.",
       },
     ],
   },
@@ -163,7 +163,7 @@ export const cursos: Curso[] = [
     categoria: "velas-artesanais",
     categoriaNome: "Velas Artesanais",
     descricao:
-      "Domine a arte da velas artesanais, desde as clássicas velas decorativas até as modernas velas aromáticas em potes de vidro. Um curso completo para quem quer empreender nesse mercado que cresce 25% ao ano.",
+      "Aprenda técnicas que podem transformar seu conhecimento em produtos para uso pessoal, presentes ou comercialização.",
     imagem: "/images/velas.jpg",
     video: "/velas.mp4",
     nivel: "Iniciante",
