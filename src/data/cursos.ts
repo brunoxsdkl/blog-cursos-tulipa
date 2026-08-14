@@ -149,7 +149,7 @@ export const cursos: Curso[] = [
       {
         pergunta: "Esse curso serve para gerar renda?",
         resposta:
-          "Você não precisa saber fazer sabonetes para começar. Você precisa aprender da maneira certa. Na Saboaria Artesanal – Módulo 1, você terá contato com as técnicas, materiais e conhecimentos fundamentais para começar a produzir seus próprios sabonetes artesanais e dar os primeiros passos nesse universo.",
+          "Sim! A partir das técnicas aprendidas, você poderá transformar suas criações em produtos para comercialização, desenvolver peças autorais e dar os primeiros passos para lucrar com a sua criatividade. 🕯️✨ Aprenda, crie e transforme conhecimento em oportunidade. Faça & Lucre!",
       },
     ],
   },
@@ -224,7 +224,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
-        resposta: "Sim! Alunos relatam faturamento mensal entre R$ 1.200 e R$ 4.000 com vendas de velas artesanais.",
+        resposta: "Sim! A partir das técnicas aprendidas, você poderá transformar suas criações em produtos para comercialização, desenvolver peças autorais e dar os primeiros passos para lucrar com a sua criatividade. 🕯️✨ Aprenda, crie e transforme conhecimento em oportunidade. Faça & Lucre!",
       },
     ],
   },
@@ -284,7 +284,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Esse curso serve para gerar renda?",
-        resposta: "Sim. Alunas faturaram de R$ 1.500 a R$ 5.000 mensais com cosméticos artesanais em feiras e redes sociais.",
+        resposta: "Sim! A partir das técnicas aprendidas, você poderá transformar suas criações em produtos para comercialização, desenvolver peças autorais e dar os primeiros passos para lucrar com a sua criatividade. 🕯️✨ Aprenda, crie e transforme conhecimento em oportunidade. Faça & Lucre!",
       },
     ],
   },
