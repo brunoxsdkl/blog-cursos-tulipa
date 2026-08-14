@@ -15,7 +15,7 @@ export default function Footer() {
               <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Saboaria Artesanal</li>
               <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Velas Artesanais</li>
               <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Cosméticos & Perfumaria</li>
-              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Faça & Lucre</li>
+              <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Produtos de Limpeza</li>
             </ul>
           </div>
           <div>
