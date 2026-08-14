@@ -96,15 +96,6 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
         <p className="text-lg text-rose-600 leading-relaxed">
           {curso.descricao}
         </p>
-        {curso.descricaoLonga && curso.descricaoLonga.length > 1 && (
-          <div className="mt-4 space-y-3">
-            {curso.descricaoLonga.slice(1).map((par, i) => (
-              <p key={i} className="text-lg text-rose-600 leading-relaxed">
-                {par}
-              </p>
-            ))}
-          </div>
-        )}
       </div>
 
       {curso.slug === "saboaria-artesanal-modulo-1" && <CursoGaleria />}
@@ -276,6 +267,18 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
       )}
 
       <Separator className="bg-rose-100 my-12" />
+
+      {curso.descricaoLonga && curso.descricaoLonga.length > 1 && (
+        <section className="mb-12">
+          <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-rose-50/40 border border-rose-100 space-y-4 text-center">
+            {curso.descricaoLonga.slice(1).map((par, i) => (
+              <p key={i} className="text-sm sm:text-base text-rose-700 leading-relaxed">
+                {par}
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
 
       <CursoFAQ curso={curso} />
 
