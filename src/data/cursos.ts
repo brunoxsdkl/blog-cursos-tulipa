@@ -82,7 +82,7 @@ export const cursos: Curso[] = [
       "Um curso prático e presencial, desenvolvido para quem deseja aprender as principais técnicas da saboaria artesanal, mesmo sem experiência anterior.",
       "Você vai aprender desde a escolha dos materiais e insumos até a produção, acabamento, embalagem, precificação e cuidados importantes para transformar sua produção artesanal em um produto com valor agregado.",
     ],
-    ctaSubtitulo: "MÓDULO 1 - DO ZÉRO A PRIMEIRA PRODUÇÃO",
+    ctaSubtitulo: "MÓDULO 1 - DO ZERO A PRIMEIRA PRODUÇÃO",
     proximosModulos: [
       "MÓDULO 2 - SABOARIA FITOTERÁPICA",
       "MÓDULO 3 - SABOARIA NATALINA",
@@ -163,7 +163,7 @@ export const cursos: Curso[] = [
     categoria: "velas-artesanais",
     categoriaNome: "Velas Artesanais",
     descricao:
-      "Domine a arte da velas artesanais, desde as clássicas velas decorativas até as modernas velas aromáticas em potes de vidro. Um curso completo para quem quer empreender nesse mercado que cresce 25% ao ano.",
+      "Domine a arte das velas artesanais, desde as clássicas velas decorativas até as modernas velas aromáticas em potes de vidro. Um curso completo para quem quer empreender nesse mercado que cresce 25% ao ano.",
     imagem: "/images/velas.jpg",
     video: "/velas.mp4",
     nivel: "Iniciante",
@@ -215,7 +215,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Posso vender os produtos depois?",
-        resposta: "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. O curso é focado em empreendedorismo. Você aprenderá a precificar, embalar e divulgar suas velas.",
+        resposta: "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei 15.154/2025. O curso é focado em empreendedorismo. Você aprenderá a precificar, embalar e divulgar suas velas.",
       },
       {
         pergunta: "Recebo certificado?",
@@ -234,7 +234,7 @@ export const cursos: Curso[] = [
     categoria: "cosmeticos-perfumaria",
     categoriaNome: "Cosméticos & Perfumaria",
     descricao:
-      "Descubra o universo da cosmética e perfumaria artesanal. Aprenda a criar desde hidratantes e sabão liquidos até perfumes exclusivos com ingredientes seguros e eficazes.",
+      "Descubra o universo da cosmética e perfumaria artesanal. Aprenda a criar desde hidratantes e sabonete líquido até perfumes exclusivos com ingredientes seguros e eficazes.",
     imagem: "/images/cosmeticos.jpg",
     video: "/cosmeticos.mp4",
     nivel: "Intermediário",
@@ -274,7 +274,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Posso vender os produtos depois?",
-        resposta: "Sim. Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. Você aprende a regularizar seus produtos conforme a ANVISA e a criar uma marca profissional.",
+        resposta: "Sim. Você poderá vender seus produtos de forma artesanal, conforme a lei 15.154/2025. Você aprende a regularizar seus produtos conforme a ANVISA e a criar uma marca profissional.",
       },
       {
         pergunta: "Recebo certificado?",
@@ -333,7 +333,7 @@ export const cursos: Curso[] = [
       },
       {
         pergunta: "Posso vender os produtos depois?",
-        resposta: "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei - 15.154/2025. O curso ensina não só a produzir, mas também a precificar, embalar e vender seus produtos de limpeza.",
+        resposta: "Sim! Você poderá vender seus produtos de forma artesanal, conforme a lei 15.154/2025. O curso ensina não só a produzir, mas também a precificar, embalar e vender seus produtos de limpeza.",
       },
       {
         pergunta: "Recebo certificado?",
