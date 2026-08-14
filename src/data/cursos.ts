@@ -237,6 +237,13 @@ export const cursos: Curso[] = [
     categoriaNome: "Cosméticos & Perfumaria",
     descricao:
       "ENTRE NO MEU UNIVERSO QUE CRIA. Você já imaginou transformar matérias-primas em produtos que despertam sensações, cuidados e desejos? No Curso Cosméticos & Perfumaria, você vai aprender na prática técnicas para criar produtos artesanais, conhecer as matérias-primas e descobrir como transformar criatividade em possibilidades.",
+    descricaoLonga: [
+      "ENTRE NO MEU UNIVERSO QUE CRIA. Você já imaginou transformar matérias-primas em produtos que despertam sensações, cuidados e desejos? No Curso Cosméticos & Perfumaria, você vai aprender na prática técnicas para criar produtos artesanais, conhecer as matérias-primas e descobrir como transformar criatividade em possibilidades.",
+      "NÃO É APENAS APRENDER A FAZER. É aprender a CRIAR. Porque quando você entende as matérias-primas, suas funções e as técnicas, você começa a enxergar possibilidades. E esse é o propósito do meu Universo que Cria: despertar em você a capacidade de transformar conhecimento em criação.",
+      "💗 FAÇA & LUCRE. O Faça & Lucre é um método criado por mim para unir conhecimento, prática, criatividade e visão de negócio. Você aprende, coloca a mão na massa e começa a enxergar como suas criações podem se transformar em produtos com identidade e valor. Faça. Crie. Encante. Lucre.",
+      "SUA IDEIA PODE VIRAR UM PRODUTO. E seu produto pode carregar algo que nenhuma receita pronta consegue oferecer: a sua identidade. VEM FAZER PARTE DO MEU UNIVERSO QUE CRIA!",
+      "Andréia Freitas — Química & Aromaterapeuta — Graduanda em Estética e Cosméticos pela Faculdade Pequeno Príncipe",
+    ],
     imagem: "/images/cosmeticos.jpg",
     video: "/cosmeticos.mp4",
     nivel: "Intermediário",
