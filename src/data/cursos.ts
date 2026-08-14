@@ -164,7 +164,7 @@ export const cursos: Curso[] = [
     categoria: "velas-artesanais",
     categoriaNome: "Velas Artesanais",
     descricao:
-      "Você não precisa apenas aprender uma técnica.Você precisa aprender o que fazer com ela.Neste curso, você vai entrar no universo da produção artesanal de forma prática, profissional e criativa, aprendendo técnicas que podem ser aplicadas para uso pessoal, presentes ou para começar a desenvolver seus próprios produtos para comercialização.",
+      "Você não precisa apenas aprender uma técnica. Você precisa aprender o que fazer com ela. Neste curso, você vai entrar no universo da produção artesanal de forma prática, profissional e criativa, aprendendo técnicas que podem ser aplicadas para uso pessoal, presentes ou para começar a desenvolver seus próprios produtos para comercialização.",
     imagem: "/images/velas.jpg",
     video: "/velas.mp4",
     nivel: "Iniciante",
