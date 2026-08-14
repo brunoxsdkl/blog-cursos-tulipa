@@ -9,12 +9,14 @@ export interface Curso {
   video?: string
   nivel: "Iniciante" | "Intermediário" | "Avançado"
   tempoLeitura: string
-  tecnicas?: string[]
+  tecnicas?: (string | { icone?: string; titulo: string; descricao?: string })[]
   produtosDestaque?: { nome: string; icone: string; descricao?: string }[]
   beneficios: (string | { icone?: string; titulo: string; descricao?: string })[]
   beneficioDestaque?: string
+  chamada?: { titulo: string; descricao: string; rodape?: string }
   inclusos?: string[]
   descricaoLonga?: string[]
+  sobre?: string[]
   ctaSubtitulo?: string
   proximosModulos?: string[]
   subtitulo?: string
@@ -237,8 +239,7 @@ export const cursos: Curso[] = [
     categoriaNome: "Cosméticos & Perfumaria",
     descricao:
       "ENTRE NO MEU UNIVERSO QUE CRIA. Você já imaginou transformar matérias-primas em produtos que despertam sensações, cuidados e desejos? No Curso Cosméticos & Perfumaria, você vai aprender na prática técnicas para criar produtos artesanais, conhecer as matérias-primas e descobrir como transformar criatividade em possibilidades.",
-    descricaoLonga: [
-      "ENTRE NO MEU UNIVERSO QUE CRIA. Você já imaginou transformar matérias-primas em produtos que despertam sensações, cuidados e desejos? No Curso Cosméticos & Perfumaria, você vai aprender na prática técnicas para criar produtos artesanais, conhecer as matérias-primas e descobrir como transformar criatividade em possibilidades.",
+    sobre: [
       "NÃO É APENAS APRENDER A FAZER. É aprender a CRIAR. Porque quando você entende as matérias-primas, suas funções e as técnicas, você começa a enxergar possibilidades. E esse é o propósito do meu Universo que Cria: despertar em você a capacidade de transformar conhecimento em criação.",
       "💗 FAÇA & LUCRE. O Faça & Lucre é um método criado por mim para unir conhecimento, prática, criatividade e visão de negócio. Você aprende, coloca a mão na massa e começa a enxergar como suas criações podem se transformar em produtos com identidade e valor. Faça. Crie. Encante. Lucre.",
       "SUA IDEIA PODE VIRAR UM PRODUTO. E seu produto pode carregar algo que nenhuma receita pronta consegue oferecer: a sua identidade. VEM FAZER PARTE DO MEU UNIVERSO QUE CRIA!",
@@ -294,37 +295,52 @@ export const cursos: Curso[] = [
   {
     id: "produtos-limpeza",
     titulo: "Produtos de Limpeza",
+    subtitulo: "Do conhecimento à prática",
     slug: "produtos-limpeza",
     categoria: "produtos-limpeza",
     categoriaNome: "Produtos de Limpeza",
     descricao:
-      "Aprenda a fabricar produtos de limpeza eficientes, sustentáveis e lucrativos. Domine as fórmulas e técnicas para produzir com qualidade profissional.",
+      "Aprenda a criar produtos de limpeza com técnica, segurança e qualidade.",
+    descricaoLonga: [
+      "Aprenda a criar produtos de limpeza com técnica, segurança e qualidade.",
+      "Um curso presencial e prático para quem deseja entender o processo de fabricação, conhecer a função das matérias-primas e aprender fórmulas que podem fazer parte da sua rotina, das suas criações e até de uma futura linha própria.",
+      "Com Andréia Freitas — Química e criadora do método Faça & Lucre.",
+    ],
     imagem: "/images/limpeza.jpg",
     video: "/limpeza.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
     tecnicas: [
-      "Higienização e segurança na manipulação de insumos",
-      "Material de apoio",
-      "Fragrâncias e coloração para produtos de limpeza",
-      "Embalagem, rotulagem e validade dos produtos",
-      "Medir pH dos produtos",
+      { icone: "🧪", titulo: "Conheça as matérias-primas", descricao: "Entenda a função dos principais componentes utilizados nas formulações." },
+      { icone: "⚗️", titulo: "Aprenda o passo a passo", descricao: "Da sequência de mistura aos cuidados durante a fabricação." },
+      { icone: "📏", titulo: "Entenda o controle de pH", descricao: "Aprenda por que medir e acompanhar o pH é importante para cada formulação." },
+      { icone: "🌸", titulo: "Fragrância e identidade", descricao: "Aprenda a trabalhar fragrâncias e coloração para criar produtos com personalidade." },
+      { icone: "🏷️", titulo: "Apresentação do produto", descricao: "Orientações sobre embalagem, rotulagem e cuidados com o produto final." },
+      { icone: "🧤", titulo: "Boas práticas e segurança", descricao: "Cuidados essenciais para manipular matérias-primas e produzir de maneira organizada e responsável." },
     ],
     produtosDestaque: [
-      { nome: "Desinfetante c/ essência", icone: "spray" },
+      { nome: "Desinfetante perfumado", icone: "spray" },
       { nome: "Detergente", icone: "detergente" },
       { nome: "Amaciante de roupas", icone: "shirt" },
-      { nome: "Alvejante s/ cloro", icone: "sparkles" },
-      { nome: "Limpa vidros", icone: "glass" },
+      { nome: "Alvejante sem cloro", icone: "sparkles" },
+      { nome: "Limpa-vidros", icone: "glass" },
       { nome: "Multiuso", icone: "multiuso" },
-      { nome: "Lava roupas", icone: "lava" },
-      { nome: "Limpa canil", icone: "canil" },
+      { nome: "Lava-roupas", icone: "lava" },
+      { nome: "Limpa-canil", icone: "canil" },
     ],
     beneficios: [
-      "Fórmulas testadas e aprovadas que funcionam de verdade",
-      "Experiência prática com orientação profissional durante todo o processo.",
-      "Certificado digital de conclusão da Dona Tulipa",
+      { icone: "👩‍🔬", titulo: "Aprendizado com uma Química", descricao: "Conhecimento técnico aplicado de forma simples e prática." },
+      { icone: "🧪", titulo: "Aula prática e presencial", descricao: "Você acompanha e participa do processo de fabricação." },
+      { icone: "📚", titulo: "Material de apoio", descricao: "Conteúdo para consultar depois do curso." },
+      { icone: "🎓", titulo: "Certificado digital", descricao: "Certificado de conclusão após a participação." },
+      { icone: "💬", titulo: "Suporte pós-curso", descricao: "Você não fica sozinha depois da aula." },
+      { icone: "✨", titulo: "Conhecimento para criar", descricao: "Aprenda técnicas que podem ser o início das suas próprias criações." },
     ],
+    chamada: {
+      titulo: "NÃO É APENAS UM CURSO DE FÓRMULAS. É O COMEÇO DE UMA NOVA HABILIDADE.",
+      descricao: "Você vai aprender fazendo, entender o processo por trás de cada produto e sair do curso com conhecimento para continuar criando. Venha para o universo Faça & Lucre e descubra tudo o que você é capaz de produzir com as próprias mãos.",
+      rodape: "FAÇA • CRIE • APRENDA • TRANSFORME",
+    },
     beneficioDestaque: "Curso presencial com duração de 4 horas",
     datas: ["2026-10-17T13:00:00"],
     faq: [

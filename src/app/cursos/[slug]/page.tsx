@@ -96,6 +96,15 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
         <p className="text-lg text-rose-600 leading-relaxed">
           {curso.descricao}
         </p>
+        {curso.descricaoLonga && curso.descricaoLonga.length > 1 && (
+          <div className="mt-4 space-y-3">
+            {curso.descricaoLonga.slice(1).map((par, i) => (
+              <p key={i} className="text-lg text-rose-600 leading-relaxed">
+                {par}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
 
       {curso.slug === "saboaria-artesanal-modulo-1" && <CursoGaleria />}
@@ -166,15 +175,27 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
               </div>
             </div>
           )}
-          {curso.tecnicas && curso.tecnicas.map((tec, i) => (
-            <div
-              key={i}
-              className="flex items-start gap-3 p-4 bg-rose-50/50 rounded-xl border border-rose-100"
-            >
-              <CheckCircle className="h-5 w-5 text-rose-400 mt-0.5 shrink-0" />
-              <span className="text-sm text-rose-700 leading-relaxed">{tec}</span>
-            </div>
-          ))}
+          {curso.tecnicas && curso.tecnicas.map((tec, i) => {
+            const t = typeof tec === "string" ? { titulo: tec } : tec
+            return (
+              <div
+                key={i}
+                className="flex items-start gap-3 p-4 bg-rose-50/50 rounded-xl border border-rose-100"
+              >
+                {t.icone ? (
+                  <span className="text-xl shrink-0">{t.icone}</span>
+                ) : (
+                  <CheckCircle className="h-5 w-5 text-rose-400 mt-0.5 shrink-0" />
+                )}
+                <div>
+                  <p className="text-sm font-semibold text-rose-900 leading-relaxed">{t.titulo}</p>
+                  {t.descricao && (
+                    <p className="text-sm text-rose-700 leading-relaxed mt-0.5">{t.descricao}</p>
+                  )}
+                </div>
+              </div>
+            )
+          })}
         </div>
         )}
       </section>
@@ -283,14 +304,32 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
 
       <Separator className="bg-rose-100 my-12" />
 
-      {curso.descricaoLonga && curso.descricaoLonga.length > 1 && (
+      {curso.sobre && curso.sobre.length > 0 && (
         <section className="mb-12">
           <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-rose-50/40 border border-rose-100 space-y-4 text-center">
-            {curso.descricaoLonga.slice(1).map((par, i) => (
+            {curso.sobre.map((par, i) => (
               <p key={i} className="text-sm sm:text-base text-rose-700 leading-relaxed">
                 {par}
               </p>
             ))}
+          </div>
+        </section>
+      )}
+
+      {curso.chamada && (
+        <section className="mb-12">
+          <div className="max-w-3xl mx-auto p-8 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-500 border border-rose-200 text-white text-center shadow-lg shadow-rose-200/50">
+            <p className="text-lg sm:text-xl font-bold uppercase tracking-[0.1em] mb-3 leading-snug">
+              {curso.chamada.titulo}
+            </p>
+            <p className="text-sm sm:text-base text-white/90 leading-relaxed">
+              {curso.chamada.descricao}
+            </p>
+            {curso.chamada.rodape && (
+              <p className="text-xs uppercase tracking-[0.2em] text-white/80 font-semibold mt-4">
+                {curso.chamada.rodape}
+              </p>
+            )}
           </div>
         </section>
       )}
