@@ -248,11 +248,6 @@ export const cursos: Curso[] = [
     video: "/cosmeticos.mp4",
     nivel: "Intermediário",
     tempoLeitura: "4 horas",
-    tecnicas: [
-      "Cremes e loções hidratantes",
-      "Conservantes e validade dos produtos",
-      "Rotulagem C/lote e validade",
-    ],
     produtosDestaque: [
       { nome: "Geleia de banho", icone: "banho" },
       { nome: "Loção hidratante", icone: "hidratante" },
