@@ -141,18 +141,25 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
               <h3 className="text-base font-bold text-white mb-4">
                 Produtos que você vai aprender a fazer
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {curso.produtosDestaque.map((prod, i) => {
                   const Icone = iconesProduto[prod.icone] ?? Sparkles
                   return (
                     <div
                       key={i}
-                      className="flex items-center gap-2 p-2.5 rounded-lg bg-white/15 border border-white/25"
+                      className="flex flex-col gap-1.5 p-3 rounded-lg bg-white/15 border border-white/25"
                     >
-                      <Icone className="h-5 w-5 shrink-0 text-white" />
-                      <span className="text-sm font-medium text-white leading-tight">
-                        {prod.nome}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <Icone className="h-5 w-5 shrink-0 text-white" />
+                        <span className="text-sm font-medium text-white leading-tight">
+                          {prod.nome}
+                        </span>
+                      </div>
+                      {prod.descricao && (
+                        <p className="text-xs text-white/85 leading-relaxed">
+                          {prod.descricao}
+                        </p>
+                      )}
                     </div>
                   )
                 })}

@@ -10,7 +10,7 @@ export interface Curso {
   nivel: "Iniciante" | "Intermediário" | "Avançado"
   tempoLeitura: string
   tecnicas?: string[]
-  produtosDestaque?: { nome: string; icone: string }[]
+  produtosDestaque?: { nome: string; icone: string; descricao?: string }[]
   beneficios: string[]
   beneficioDestaque?: string
   inclusos?: string[]
@@ -249,14 +249,14 @@ export const cursos: Curso[] = [
     nivel: "Intermediário",
     tempoLeitura: "4 horas",
     produtosDestaque: [
-      { nome: "Geleia de banho", icone: "banho" },
-      { nome: "Loção hidratante", icone: "hidratante" },
-      { nome: "Sais de chuveiro", icone: "chuveiro" },
-      { nome: "Sais de banho", icone: "sais" },
-      { nome: "Pasta esfoliante hidratante", icone: "esfoliante" },
-      { nome: "Perfume", icone: "perfume" },
-      { nome: "Sachê de gaveta", icone: "sache" },
-      { nome: "Aromatizador de vareta", icone: "aroma" },
+      { nome: "Geléia de Banho", icone: "banho", descricao: "Uma experiência sensorial de textura, aroma e cuidado." },
+      { nome: "Loção Hidratante", icone: "hidratante", descricao: "Aprenda a criar uma loção agradável, perfumada e com toque especial." },
+      { nome: "Sais de Chuveiro", icone: "chuveiro", descricao: "Uma técnica diferente para transformar o banho em um momento de autocuidado." },
+      { nome: "Sais de Banho", icone: "sais", descricao: "A combinação perfeita entre aroma, beleza e experiência." },
+      { nome: "Pasta Esfoliante", icone: "esfoliante", descricao: "Aprenda a trabalhar textura e ingredientes para criar uma experiência de esfoliação." },
+      { nome: "Perfume", icone: "perfume", descricao: "Descubra os fundamentos para criar uma fragrância importada ou nacional." },
+      { nome: "Sachê de Gaveta", icone: "sache", descricao: "Crie produtos perfumados que levam sua fragrância para os pequenos detalhes do dia a dia." },
+      { nome: "Aromatizador de Varetas", icone: "aroma", descricao: "Aprenda a desenvolver um dos produtos mais procurados na perfumaria de ambientes." },
     ],
     beneficios: [
       "Produtos com alta procura e clientes dispostos a pagar mais por cosméticos naturais",
