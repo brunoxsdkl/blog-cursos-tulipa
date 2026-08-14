@@ -82,6 +82,9 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
           </Badge>
         </div>
 
+        <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-rose-400 font-semibold mb-2">
+          FORMAÇÃO DONA TULIPA
+        </p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rose-900 leading-tight mb-3">
           {curso.titulo}
         </h1>
