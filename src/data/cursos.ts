@@ -236,7 +236,7 @@ export const cursos: Curso[] = [
     categoria: "cosmeticos-perfumaria",
     categoriaNome: "Cosméticos & Perfumaria",
     descricao:
-      "Descubra o universo da cosmética e perfumaria artesanal. Aprenda a criar desde hidratantes e sabonete líquido até perfumes exclusivos com ingredientes seguros e eficazes.",
+      "ENTRE NO MEU UNIVERSO QUE CRIA. Você já imaginou transformar matérias-primas em produtos que despertam sensações, cuidados e desejos? No Curso Cosméticos & Perfumaria, você vai aprender na prática técnicas para criar produtos artesanais, conhecer as matérias-primas e descobrir como transformar criatividade em possibilidades.",
     imagem: "/images/cosmeticos.jpg",
     video: "/cosmeticos.mp4",
     nivel: "Intermediário",
