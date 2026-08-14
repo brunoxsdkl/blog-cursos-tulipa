@@ -148,7 +148,7 @@ export const cursos: Curso[] = [
       {
         pergunta: "Esse curso serve para gerar renda?",
         resposta:
-          "Você não precisa saber fazer sabonetes para começar. Você precisa aprender da maneira certa. No Saboaria Artesanal – Módulo 1, você terá contato com as técnicas, materiais e conhecimentos fundamentais para começar a produzir seus próprios sabonetes artesanais e dar os primeiros passos nesse universo.",
+          "Você não precisa saber fazer sabonetes para começar. Você precisa aprender da maneira certa. Na Saboaria Artesanal – Módulo 1, você terá contato com as técnicas, materiais e conhecimentos fundamentais para começar a produzir seus próprios sabonetes artesanais e dar os primeiros passos nesse universo.",
       },
     ],
   },
