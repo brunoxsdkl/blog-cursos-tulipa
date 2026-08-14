@@ -200,7 +200,7 @@ export const cursos: Curso[] = [
       "Mercado em alta com clientes fiéis que buscam bem-estar e decoração",
       "Velas aromáticas são presentes perfeitos para datas comemorativas",
       "Possibilidade de criar linhas personalizadas por evento ou marca",
-      "Lucro médio de 200% a 400% por unidade vendida",
+      "Experiência prática com orientação profissional durante todo o processo.",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
     datas: ["2026-10-03T13:00:00", "2026-11-21T13:00:00"],
@@ -256,7 +256,7 @@ export const cursos: Curso[] = [
     ],
     beneficios: [
       "Produtos com alta procura e clientes dispostos a pagar mais por cosméticos naturais",
-      "Ingredientes acessíveis e rendimento de até 90% de lucro por unidade",
+      "Experiência prática com orientação profissional durante todo o processo.",
       "Mercado de beleza limpa (clean beauty) em expansão no Brasil",
       "Possibilidade de criar marca própria com identidade única",
       "Fidelização de clientes que buscam produtos personalizados e livres de químicos agressivos",
@@ -317,7 +317,7 @@ export const cursos: Curso[] = [
     ],
     beneficios: [
       "Fórmulas testadas e aprovadas que funcionam de verdade",
-      "Margem de lucro de até 300% sobre cada produto",
+      "Experiência prática com orientação profissional durante todo o processo.",
       "Certificado digital de conclusão da Dona Tulipa",
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
