@@ -192,7 +192,7 @@ export const cursos: Curso[] = [
           "Vela Mosaico – Aprenda a trabalhar diferentes cores e elementos para criar um efeito visual sofisticado.",
           "Vela Luminária – Uma técnica decorativa que transforma a vela em uma verdadeira peça de ambientação.",
           "Vela de Massagem – Aprenda a produzir uma vela destinada à aplicação corporal, trabalhando uma composição de origem natural.",
-          "Vela Gel Aquário – Uma técnica encantadora utilizando vela gel e elementos decorativos para criar o famoso efeito aquário.",
+          "Vela Gel Aquário – Uma técnica encantadora utilizando gel e elementos decorativos para criar o famoso efeito aquário.",
         ],
       },
     ],
