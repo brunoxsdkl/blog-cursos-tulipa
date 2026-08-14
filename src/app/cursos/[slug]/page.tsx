@@ -67,8 +67,8 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
         Voltar
       </Link>
 
-      <div className="mb-8">
-        <div className="flex items-center gap-3 mb-4">
+      <div className="mb-8 text-center">
+        <div className="flex items-center justify-center gap-3 mb-4">
           <Badge className="bg-rose-100 text-rose-700 border-rose-200 text-sm px-3 py-1">
             {curso.categoriaNome}
           </Badge>
@@ -82,7 +82,7 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
           </Badge>
         </div>
 
-        <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] text-rose-400 font-semibold mb-2">
+        <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-rose-400 font-semibold mb-2">
           FORMAÇÃO DONA TULIPA
         </p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-rose-900 leading-tight mb-3">
