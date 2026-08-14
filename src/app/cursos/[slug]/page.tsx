@@ -206,17 +206,25 @@ export default async function CursoPage({ params }: { params: Promise<{ slug: st
               </div>
             </div>
           )}
-          {curso.beneficios.map((ben, i) => (
-            <div
-              key={i}
-              className="p-5 bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl border border-rose-100"
-            >
-              <div className="flex items-start gap-3">
-                <span className="text-rose-400 text-lg">✦</span>
-                <span className="text-sm text-rose-700 leading-relaxed">{ben}</span>
+          {curso.beneficios.map((ben, i) => {
+            const b = typeof ben === "string" ? { titulo: ben } : ben
+            return (
+              <div
+                key={i}
+                className="p-5 bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl border border-rose-100"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="text-lg shrink-0">{b.icone ?? "✦"}</span>
+                  <div>
+                    <p className="text-sm font-semibold text-rose-900 leading-relaxed">{b.titulo}</p>
+                    {b.descricao && (
+                      <p className="text-sm text-rose-700 leading-relaxed mt-1">{b.descricao}</p>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </section>
 

@@ -11,7 +11,7 @@ export interface Curso {
   tempoLeitura: string
   tecnicas?: string[]
   produtosDestaque?: { nome: string; icone: string; descricao?: string }[]
-  beneficios: string[]
+  beneficios: (string | { icone?: string; titulo: string; descricao?: string })[]
   beneficioDestaque?: string
   inclusos?: string[]
   descricaoLonga?: string[]
@@ -259,11 +259,12 @@ export const cursos: Curso[] = [
       { nome: "Aromatizador de Varetas", icone: "aroma", descricao: "Aprenda a desenvolver um dos produtos mais procurados na perfumaria de ambientes." },
     ],
     beneficios: [
-      "Produtos com alta procura e clientes dispostos a pagar mais por cosméticos naturais",
-      "Experiência prática com orientação profissional durante todo o processo.",
-      "Mercado de beleza limpa (clean beauty) em expansão no Brasil",
-      "Possibilidade de criar marca própria com identidade única",
-      "Fidelização de clientes que buscam produtos personalizados e livres de químicos agressivos",
+      { icone: "🌿", titulo: "Experiência de SPA", descricao: "Crie produtos para momentos de autocuidado e bem-estar." },
+      { icone: "🌸", titulo: "Identidade Olfativa", descricao: "Desenvolva fragrâncias que expressem sua personalidade." },
+      { icone: "💎", titulo: "Sua Própria Linha", descricao: "Crie cosméticos com conceito, estilo e identidade." },
+      { icone: "✨", titulo: "Universo Sensorial", descricao: "Explore aromas, texturas e diferentes sensações." },
+      { icone: "🧴", titulo: "Cosméticos Personalizados", descricao: "Aprenda a criar produtos únicos e especiais." },
+      { icone: "🌺", titulo: "Perfumaria Criativa", descricao: "Descubra combinações e crie seu próprio perfume." },
     ],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
     datas: ["2026-11-07T13:00:00"],
