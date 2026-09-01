@@ -4,21 +4,25 @@ import { useEffect, useState } from "react"
 import { cursos } from "@/data/cursos"
 import CourseCard from "./CourseCard"
 
-type InfoVaga = { vagas_totais: number; vagas_preenchidas: number; valor?: number }
+type InfoVaga = { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null }
 
 export default function CourseList() {
   const [precos, setPrecos] = useState<Record<string, number>>({})
+  const [datas, setDatas] = useState<Record<string, string>>({})
 
   useEffect(() => {
     fetch("/api/vagas")
       .then((r) => r.json())
       .then((data) => {
         if (data && !data.error) {
-          const map: Record<string, number> = {}
+          const precoMap: Record<string, number> = {}
+          const dataMap: Record<string, string> = {}
           for (const [slug, info] of Object.entries(data) as [string, InfoVaga][]) {
-            if (typeof info.valor === "number" && info.valor > 0) map[slug] = info.valor
+            if (typeof info.valor === "number" && info.valor > 0) precoMap[slug] = info.valor
+            if (typeof info.data === "string" && info.data) dataMap[slug] = info.data
           }
-          setPrecos(map)
+          setPrecos(precoMap)
+          setDatas(dataMap)
         }
       })
       .catch(() => {})
@@ -32,7 +36,12 @@ export default function CourseList() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {cursos.map((curso) => (
-          <CourseCard key={curso.id} curso={curso} preco={precos[curso.slug] ?? curso.preco} />
+          <CourseCard
+            key={curso.id}
+            curso={curso}
+            preco={precos[curso.slug] ?? curso.preco}
+            data={datas[curso.slug] ?? null}
+          />
         ))}
       </div>
     </section>

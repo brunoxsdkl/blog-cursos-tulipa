@@ -14,8 +14,9 @@ function proximaData(datas: string[]): string {
   return new Date(futuras[0] ?? datas[0]).toISOString()
 }
 
-export default function CourseCard({ curso, preco }: { curso: Curso; preco?: number }) {
+export default function CourseCard({ curso, preco, data }: { curso: Curso; preco?: number; data?: string | null }) {
   const valorExibido = typeof preco === "number" && preco > 0 ? preco : curso.preco
+  const dataExibida = data || proximaData(curso.datas)
 
   return (
     <Link href={`/cursos/${curso.slug}`}>
@@ -45,12 +46,12 @@ export default function CourseCard({ curso, preco }: { curso: Curso; preco?: num
           <h3 className="text-sm uppercase tracking-[0.05em] font-medium text-rose-800 mb-2 leading-snug group-hover:text-rose-600 transition-colors">
             {curso.titulo}
           </h3>
+          <div className="my-4 flex justify-center">
+            <span className="text-2xl font-bold text-rose-700">R$ {valorExibido.toFixed(2).replace(".", ",")}</span>
+          </div>
           <p className="text-sm text-rose-500 line-clamp-3 leading-relaxed">
             {curso.descricao}
           </p>
-          <div className="mt-3 flex items-baseline gap-1">
-            <span className="text-lg font-bold text-rose-700">R$ {valorExibido.toFixed(2).replace(".", ",")}</span>
-          </div>
         </CardContent>
         <CardFooter className="px-5 pb-4 pt-0 flex flex-col gap-4 text-xs text-rose-400">
           <div className="flex items-center gap-4">
@@ -63,7 +64,7 @@ export default function CourseCard({ curso, preco }: { curso: Curso; preco?: num
               {curso.tempoLeitura}
             </span>
           </div>
-          <CourseCountdown date={proximaData(curso.datas)} />
+          <CourseCountdown date={dataExibida} />
         </CardFooter>
       </Card>
     </Link>
