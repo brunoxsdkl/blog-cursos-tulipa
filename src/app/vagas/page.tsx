@@ -8,9 +8,18 @@ import { Check } from "lucide-react"
 
 const VAGAS_TOTAIS = 20
 
+function proximaData(datas: string[]): string {
+  const now = Date.now()
+  const futuras = datas
+    .map((d) => new Date(d).getTime())
+    .filter((t) => t > now)
+    .sort((a, b) => a - b)
+  return new Date(futuras[0] ?? datas[0]).toISOString()
+}
+
 export default function VagasPage() {
   const [selected, setSelected] = useState<string | null>(null)
-  const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, { vagas_totais: number; vagas_preenchidas: number }> | null>(null)
+  const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null }> | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -18,8 +27,8 @@ export default function VagasPage() {
       .then((r) => r.json())
       .then((data) => {
         if (data && !data.error) {
-          const map: Record<string, { vagas_totais: number; vagas_preenchidas: number }> = {}
-          for (const [slug, info] of Object.entries(data) as [string, { vagas_totais: number; vagas_preenchidas: number }][]) {
+          const map: Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null }> = {}
+          for (const [slug, info] of Object.entries(data) as [string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null }][]) {
             map[slug] = info
           }
           setVagasAoVivo(map)
@@ -51,6 +60,8 @@ export default function VagasPage() {
             const preenchidas = info?.vagas_preenchidas ?? (loading ? 0 : 0)
             const restantes = Math.max(0, total - preenchidas)
             const isSelected = selected === curso.id
+            const valorExibido = (typeof info?.valor === "number" && info.valor > 0) ? info.valor : curso.preco
+            const dataExibida = info?.data || proximaData(curso.datas)
 
             return (
               <button
@@ -91,9 +102,20 @@ export default function VagasPage() {
                   </div>
 
                   <CardContent className="p-4">
-                    <h3 className="text-sm uppercase tracking-[0.05em] font-medium text-rose-700/90 mb-2 leading-snug">
+                    <h3 className="text-center text-sm uppercase tracking-[0.05em] font-medium text-rose-700/90 mb-2 leading-snug">
                       {curso.titulo}
                     </h3>
+
+                    <div className="mb-3 flex items-center justify-center">
+                      <span className="text-2xl font-bold text-rose-700">R$ {valorExibido.toFixed(2).replace(".", ",")}</span>
+                    </div>
+
+                    <div className="mb-2 rounded-lg bg-rose-50 border border-rose-100 py-1.5 text-center">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-rose-400 font-medium">Próxima turma</p>
+                      <p className="text-sm font-semibold text-rose-700">
+                        {new Date(dataExibida).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" })}
+                      </p>
+                    </div>
 
                     <div className="mt-3">
                       <div className="flex items-center justify-between text-xs text-rose-400 mb-1">
