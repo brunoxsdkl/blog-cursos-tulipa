@@ -30,13 +30,13 @@ const normalizar = (texto: string) =>
 export async function GET() {
   const { data: cursos, error } = await supabase
     .from("cursos")
-    .select("id, nome, vagas, alunos(id, status_pagamento)")
+    .select("id, nome, vagas, valor, alunos(id, status_pagamento)")
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 
-  const vagas: Record<string, { vagas_totais: number; vagas_preenchidas: number }> = {}
+  const vagas: Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number }> = {}
 
   for (const curso of cursos || []) {
     const nomeNormalizado = normalizar(curso.nome)
@@ -47,6 +47,7 @@ export async function GET() {
       vagas[entrada.slug] = {
         vagas_totais: curso.vagas ?? 20,
         vagas_preenchidas: curso.alunos?.filter((a) => a.status_pagamento === "Pago").length ?? 0,
+        valor: curso.valor ?? 0,
       }
     }
   }

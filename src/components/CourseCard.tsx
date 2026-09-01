@@ -14,7 +14,9 @@ function proximaData(datas: string[]): string {
   return new Date(futuras[0] ?? datas[0]).toISOString()
 }
 
-export default function CourseCard({ curso }: { curso: Curso }) {
+export default function CourseCard({ curso, preco }: { curso: Curso; preco?: number }) {
+  const valorExibido = typeof preco === "number" && preco > 0 ? preco : curso.preco
+
   return (
     <Link href={`/cursos/${curso.slug}`}>
       <Card className="group h-full overflow-hidden border-rose-100 hover:border-rose-300 hover:shadow-lg transition-all duration-300 bg-white">
@@ -46,6 +48,9 @@ export default function CourseCard({ curso }: { curso: Curso }) {
           <p className="text-sm text-rose-500 line-clamp-3 leading-relaxed">
             {curso.descricao}
           </p>
+          <div className="mt-3 flex items-baseline gap-1">
+            <span className="text-lg font-bold text-rose-700">R$ {valorExibido.toFixed(2).replace(".", ",")}</span>
+          </div>
         </CardContent>
         <CardFooter className="px-5 pb-4 pt-0 flex flex-col gap-4 text-xs text-rose-400">
           <div className="flex items-center gap-4">

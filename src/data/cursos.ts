@@ -9,6 +9,7 @@ export interface Curso {
   video?: string
   nivel: "Iniciante" | "Intermediário" | "Avançado"
   tempoLeitura: string
+  preco: number
   tecnicas?: (string | { icone?: string; titulo: string; descricao?: string })[]
   produtosDestaque?: { nome: string; icone: string; descricao?: string }[]
   beneficios: (string | { icone?: string; titulo: string; descricao?: string })[]
@@ -95,6 +96,7 @@ export const cursos: Curso[] = [
     video: "/saboaria.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
+    preco: 190,
     tecnicas: [
       "Fundamentos da Saboaria Artesanal – Conheça matérias-primas, utensílios, equipamentos e suas principais funções.",
       "Técnicas de produção – Aprenda técnicas artesanais na prática, com acompanhamento durante toda a produção.",
@@ -171,6 +173,7 @@ export const cursos: Curso[] = [
     video: "/velas.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
+    preco: 190,
     aprendizado: [
       {
         icone: "🔬",
@@ -249,6 +252,7 @@ export const cursos: Curso[] = [
     video: "/cosmeticos.mp4",
     nivel: "Intermediário",
     tempoLeitura: "4 horas",
+    preco: 190,
     produtosDestaque: [
       { nome: "Geléia de Banho", icone: "banho", descricao: "Uma experiência sensorial de textura, aroma e cuidado." },
       { nome: "Loção Hidratante", icone: "hidratante", descricao: "Aprenda a criar uma loção agradável, perfumada e com toque especial." },
@@ -310,6 +314,7 @@ export const cursos: Curso[] = [
     video: "/limpeza.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
+    preco: 150,
     tecnicas: [
       { icone: "🧪", titulo: "Conheça as matérias-primas", descricao: "Entenda a função dos principais componentes utilizados nas formulações." },
       { icone: "⚗️", titulo: "Aprenda o passo a passo", descricao: "Da sequência de mistura aos cuidados durante a fabricação." },
