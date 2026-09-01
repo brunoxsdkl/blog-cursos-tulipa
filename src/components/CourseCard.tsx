@@ -43,7 +43,7 @@ export default function CourseCard({ curso, preco, data }: { curso: Curso; preco
           </Badge>
         </div>
         <CardContent className="p-5">
-          <h3 className="text-sm uppercase tracking-[0.05em] font-medium text-rose-800 mb-2 leading-snug group-hover:text-rose-600 transition-colors">
+          <h3 className="text-center text-sm uppercase tracking-[0.05em] font-medium text-rose-800 mb-2 leading-snug group-hover:text-rose-600 transition-colors">
             {curso.titulo}
           </h3>
           <div className="my-4 flex justify-center">
