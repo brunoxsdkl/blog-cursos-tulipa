@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Clock, BarChart } from "lucide-react"
 import type { Curso } from "@/data/cursos"
+import { formatarDuracao } from "@/lib/duracao"
 import CourseCountdown from "./CourseCountdown"
 
 function proximaData(datas: string[]): string {
@@ -14,9 +15,10 @@ function proximaData(datas: string[]): string {
   return new Date(futuras[0] ?? datas[0]).toISOString()
 }
 
-export default function CourseCard({ curso, preco, data }: { curso: Curso; preco?: number; data?: string | null }) {
+export default function CourseCard({ curso, preco, data, horario }: { curso: Curso; preco?: number; data?: string | null; horario?: { inicio: string | null; termino: string | null } | null }) {
   const valorExibido = typeof preco === "number" && preco > 0 ? preco : curso.preco
   const dataExibida = data || proximaData(curso.datas)
+  const duracaoExibida = formatarDuracao(horario?.inicio, horario?.termino, curso.tempoLeitura)
 
   return (
     <Link href={`/cursos/${curso.slug}`}>
@@ -61,7 +63,7 @@ export default function CourseCard({ curso, preco, data }: { curso: Curso; preco
             </span>
             <span className="flex items-center gap-1">
               <Clock className="h-3.5 w-3.5" />
-              {curso.tempoLeitura}
+              {duracaoExibida}
             </span>
           </div>
           <CourseCountdown date={dataExibida} />

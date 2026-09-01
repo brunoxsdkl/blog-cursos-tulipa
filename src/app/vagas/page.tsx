@@ -5,6 +5,7 @@ import { cursos } from "@/data/cursos"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
+import { formatarDuracao } from "@/lib/duracao"
 
 const VAGAS_TOTAIS = 20
 
@@ -19,7 +20,7 @@ function proximaData(datas: string[]): string {
 
 export default function VagasPage() {
   const [selected, setSelected] = useState<string | null>(null)
-  const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null }> | null>(null)
+  const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null }> | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -27,8 +28,8 @@ export default function VagasPage() {
       .then((r) => r.json())
       .then((data) => {
         if (data && !data.error) {
-          const map: Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null }> = {}
-          for (const [slug, info] of Object.entries(data) as [string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null }][]) {
+          const map: Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null }> = {}
+          for (const [slug, info] of Object.entries(data) as [string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null }][]) {
             map[slug] = info
           }
           setVagasAoVivo(map)
@@ -62,6 +63,7 @@ export default function VagasPage() {
             const isSelected = selected === curso.id
             const valorExibido = (typeof info?.valor === "number" && info.valor > 0) ? info.valor : curso.preco
             const dataExibida = info?.data || proximaData(curso.datas)
+            const duracaoExibida = formatarDuracao(info?.horario_inicio, info?.horario_termino, curso.tempoLeitura)
 
             return (
               <button
@@ -115,6 +117,7 @@ export default function VagasPage() {
                       <p className="text-sm font-semibold text-rose-700">
                         {new Date(dataExibida).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" })}
                       </p>
+                      <p className="text-[11px] text-rose-500 mt-0.5">Duração: {duracaoExibida}</p>
                     </div>
 
                     <div className="mt-3">
