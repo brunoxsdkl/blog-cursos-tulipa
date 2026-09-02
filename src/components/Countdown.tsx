@@ -78,7 +78,7 @@ export default function Countdown() {
             <img
               src="/consultora-elaine.jpeg"
               alt="Consultora"
-              className="w-8 h-8 rounded-full object-cover ring-2 ring-white/80"
+              className="w-12 h-12 rounded-full object-cover ring-2 ring-white/90"
             />
             FALE COM UM CONSULTOR
           </a>
