@@ -60,7 +60,7 @@ export default function Countdown() {
         </h2>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="/vagas"
+            href="#cursos"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-sm uppercase tracking-[0.15em] font-medium shadow-lg transition-all duration-300 bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-rose-300/40 hover:shadow-rose-400/60 hover:scale-105"
           >
             CONSULTE AS VAGAS
