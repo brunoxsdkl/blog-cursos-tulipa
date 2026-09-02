@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { formatarDuracao } from "@/lib/duracao"
 import { formatarDataBrasil, proximaDataISO } from "@/lib/data"
-import { BookOpen, Package, Coffee } from "lucide-react"
+import { BookOpen, Package, Coffee, Gift } from "lucide-react"
 
 const VAGAS_TOTAIS = 20
 
@@ -94,6 +94,8 @@ export default function CourseList() {
                     <span className="inline-flex items-center gap-1"><Package className="w-3.5 h-3.5 shrink-0" /> Material prático incluso</span>
                     <span className="h-3 w-px bg-rose-200 shrink-0" />
                     <span className="inline-flex items-center gap-1"><Coffee className="w-3.5 h-3.5 shrink-0" /> Coffee break</span>
+                    <span className="h-3 w-px bg-rose-200 shrink-0" />
+                    <span className="inline-flex items-center gap-1"><Gift className="w-3.5 h-3.5 shrink-0" /> Leva as amostras produzidas</span>
                   </div>
 
                     <div className="mb-2 rounded-lg bg-rose-50 border border-rose-100 py-1.5 text-center">
