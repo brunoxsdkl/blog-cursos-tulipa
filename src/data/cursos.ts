@@ -74,7 +74,7 @@ export const categorias: { slug: CategoriaSlug; nome: string; descricao: string 
 export const cursos: Curso[] = [
   {
     id: "saboaria-modulo-1",
-    titulo: "Saboaria Artesanal",
+    titulo: "SABOARIA ARTESANAL - NATAL",
     subtitulo: "Módulo 1",
     slug: "saboaria-artesanal-modulo-1",
     categoria: "saboaria-artesanal",
