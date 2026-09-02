@@ -148,7 +148,7 @@ export default function VagasPage() {
 
         <div className="flex justify-center">
           <a
-            href="https://wa.me/554199210392"
+            href="https://wa.me/41997547175"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-3 px-10 py-4 rounded-full text-sm uppercase tracking-[0.15em] font-medium shadow-lg transition-all duration-300 ${
