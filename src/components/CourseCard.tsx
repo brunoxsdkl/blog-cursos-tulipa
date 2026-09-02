@@ -4,20 +4,12 @@ import { Badge } from "@/components/ui/badge"
 import { Clock, BarChart } from "lucide-react"
 import type { Curso } from "@/data/cursos"
 import { formatarDuracao } from "@/lib/duracao"
+import { proximaDataISO } from "@/lib/data"
 import CourseCountdown from "./CourseCountdown"
-
-function proximaData(datas: string[]): string {
-  const now = Date.now()
-  const futuras = datas
-    .map((d) => new Date(d).getTime())
-    .filter((t) => t > now)
-    .sort((a, b) => a - b)
-  return new Date(futuras[0] ?? datas[0]).toISOString()
-}
 
 export default function CourseCard({ curso, preco, data, horario }: { curso: Curso; preco?: number; data?: string | null; horario?: { inicio: string | null; termino: string | null } | null }) {
   const valorExibido = typeof preco === "number" && preco > 0 ? preco : curso.preco
-  const dataExibida = data || proximaData(curso.datas)
+  const dataExibida = data || proximaDataISO(curso.datas)
   const duracaoExibida = formatarDuracao(horario?.inicio, horario?.termino, curso.tempoLeitura)
 
   return (

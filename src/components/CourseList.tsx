@@ -6,19 +6,11 @@ import { cursos } from "@/data/cursos"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { formatarDuracao } from "@/lib/duracao"
+import { formatarDataBrasil, proximaDataISO } from "@/lib/data"
 
 const VAGAS_TOTAIS = 20
 
 type InfoVaga = { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null }
-
-function proximaData(datas: string[]): string {
-  const now = Date.now()
-  const futuras = datas
-    .map((d) => new Date(d).getTime())
-    .filter((t) => t > now)
-    .sort((a, b) => a - b)
-  return new Date(futuras[0] ?? datas[0]).toISOString()
-}
 
 export default function CourseList() {
   const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, InfoVaga> | null>(null)
@@ -51,7 +43,7 @@ export default function CourseList() {
           const preenchidas = info?.vagas_preenchidas ?? 0
           const restantes = Math.max(0, total - preenchidas)
           const valorExibido = (typeof info?.valor === "number" && info.valor > 0) ? info.valor : curso.preco
-          const dataExibida = info?.data || proximaData(curso.datas)
+          const dataExibida = info?.data || proximaDataISO(curso.datas)
           const duracaoExibida = formatarDuracao(info?.horario_inicio, info?.horario_termino, curso.tempoLeitura)
 
           return (
@@ -89,7 +81,7 @@ export default function CourseList() {
                   <div className="mb-2 rounded-lg bg-rose-50 border border-rose-100 py-1.5 text-center">
                     <p className="text-[10px] uppercase tracking-[0.15em] text-rose-400 font-medium">Próxima turma</p>
                     <p className="text-sm font-semibold text-rose-700">
-                      {new Date(dataExibida).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" })}
+                      {formatarDataBrasil(dataExibida)}
                     </p>
                     <p className="text-[11px] text-rose-500 mt-0.5">Duração: {duracaoExibida}</p>
                   </div>

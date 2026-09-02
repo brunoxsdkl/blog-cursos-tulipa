@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { formatarDataBrasil } from "@/lib/data"
 
 export default function CourseCountdown({ date }: { date: string }) {
-  const target = new Date(date).getTime()
+  const target = new Date(date.split("T")[0] + "T00:00:00").getTime()
 
   function calc() {
     const diff = target - Date.now()
@@ -23,11 +24,7 @@ export default function CourseCountdown({ date }: { date: string }) {
     return () => clearInterval(id)
   }, [target])
 
-  const label = new Date(date).toLocaleDateString("pt-BR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  })
+  const label = formatarDataBrasil(date)
 
   return (
     <div className="mt-4 border-t border-rose-100 pt-4">
