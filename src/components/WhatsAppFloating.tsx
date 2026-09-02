@@ -1,7 +1,7 @@
 export default function WhatsAppFloating() {
   return (
     <a
-      href="http://wa.me/554199210392"
+      href="https://wa.me/41997547175"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-50 group"

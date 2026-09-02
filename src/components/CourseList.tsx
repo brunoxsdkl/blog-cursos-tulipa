@@ -10,7 +10,8 @@ import { formatarDataBrasil, proximaDataISO } from "@/lib/data"
 
 const VAGAS_TOTAIS = 20
 
-type InfoVaga = { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null }
+type Turma = { data?: string | null; horario_inicio?: string | null; horario_termino?: string | null; vagas_totais: number; vagas_preenchidas: number }
+type InfoVaga = { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null; turmas?: Turma[] }
 
 export default function CourseList() {
   const [vagasAoVivo, setVagasAoVivo] = useState<Record<string, InfoVaga> | null>(null)
@@ -39,12 +40,20 @@ export default function CourseList() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {cursos.map((curso) => {
           const info = vagasAoVivo?.[curso.slug]
-          const total = info?.vagas_totais ?? VAGAS_TOTAIS
-          const preenchidas = info?.vagas_preenchidas ?? 0
+          const turmas = info?.turmas?.length
+            ? [...info.turmas]
+            : info
+              ? [{ data: info.data, horario_inicio: info.horario_inicio, horario_termino: info.horario_termino, vagas_totais: info.vagas_totais, vagas_preenchidas: info.vagas_preenchidas }]
+              : []
+          const proxima = turmas[0]
+          const segunda = turmas[1]
+          const total = proxima?.vagas_totais ?? VAGAS_TOTAIS
+          const preenchidas = proxima?.vagas_preenchidas ?? 0
           const restantes = Math.max(0, total - preenchidas)
           const valorExibido = (typeof info?.valor === "number" && info.valor > 0) ? info.valor : curso.preco
-          const dataExibida = info?.data || proximaDataISO(curso.datas)
-          const duracaoExibida = formatarDuracao(info?.horario_inicio, info?.horario_termino, curso.tempoLeitura)
+          const dataExibida = proxima?.data || proximaDataISO(curso.datas)
+          const duracaoProxima = formatarDuracao(proxima?.horario_inicio, proxima?.horario_termino, curso.tempoLeitura)
+          const duracaoSegunda = formatarDuracao(segunda?.horario_inicio, segunda?.horario_termino, curso.tempoLeitura)
 
           return (
             <Link key={curso.id} href={`/cursos/${curso.slug}`} className="group">
@@ -83,8 +92,20 @@ export default function CourseList() {
                     <p className="text-sm font-semibold text-rose-700">
                       {formatarDataBrasil(dataExibida)}
                     </p>
-                    <p className="text-[11px] text-rose-500 mt-0.5">Duração: {duracaoExibida}</p>
+                    <p className="text-[11px] text-rose-500 mt-0.5">Duração: {duracaoProxima}</p>
                   </div>
+
+                  {segunda?.data && (
+                    <div className="mb-2 rounded-lg bg-pink-50 border border-pink-200 py-1.5 px-2 text-center">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-pink-500 font-semibold">
+                        Também tem turma
+                      </p>
+                      <p className="text-sm font-semibold text-pink-700">
+                        {formatarDataBrasil(segunda.data)}
+                      </p>
+                      <p className="text-[11px] text-pink-500 mt-0.5">Duração: {duracaoSegunda}</p>
+                    </div>
+                  )}
 
                   <div className="mt-3">
                     <div className="flex items-center justify-between text-xs text-rose-400 mb-1">

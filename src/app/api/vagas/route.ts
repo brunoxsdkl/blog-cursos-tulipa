@@ -36,7 +36,15 @@ export async function GET() {
     return NextResponse.json({ error: error.message }, { status: 500 })
   }
 
-  const vagas: Record<string, { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null }> = {}
+  type Turma = {
+    data: string | null
+    horario_inicio: string | null
+    horario_termino: string | null
+    vagas_totais: number
+    vagas_preenchidas: number
+  }
+
+  const agrupado: Record<string, { valor: number; turmas: Turma[] }> = {}
 
   for (const curso of cursos || []) {
     const nomeNormalizado = normalizar(curso.nome)
@@ -44,14 +52,38 @@ export async function GET() {
       c.nomes.some((nome) => normalizar(nome) === nomeNormalizado)
     )
     if (entrada) {
-      vagas[entrada.slug] = {
-        vagas_totais: curso.vagas ?? 20,
-        vagas_preenchidas: curso.alunos?.filter((a) => a.status_pagamento === "Pago").length ?? 0,
-        valor: curso.valor ?? 0,
+      if (!agrupado[entrada.slug]) {
+        agrupado[entrada.slug] = { valor: curso.valor ?? 0, turmas: [] }
+      }
+      agrupado[entrada.slug].turmas.push({
         data: curso.data ?? null,
         horario_inicio: curso.horario_inicio ?? null,
         horario_termino: curso.horario_termino ?? null,
-      }
+        vagas_totais: curso.vagas ?? 20,
+        vagas_preenchidas: curso.alunos?.filter((a) => a.status_pagamento === "Pago").length ?? 0,
+      })
+    }
+  }
+
+  const ordenarPorData = (turmas: Turma[]) =>
+    [...turmas].sort((a, b) => {
+      if (!a.data) return 1
+      if (!b.data) return -1
+      return a.data.localeCompare(b.data)
+    })
+
+  const vagas: Record<string, unknown> = {}
+  for (const [slug, grupo] of Object.entries(agrupado)) {
+    const turmas = ordenarPorData(grupo.turmas)
+    const proxima = turmas[0]
+    vagas[slug] = {
+      valor: grupo.valor,
+      turmas,
+      data: proxima?.data ?? null,
+      horario_inicio: proxima?.horario_inicio ?? null,
+      horario_termino: proxima?.horario_termino ?? null,
+      vagas_totais: proxima?.vagas_totais ?? 20,
+      vagas_preenchidas: proxima?.vagas_preenchidas ?? 0,
     }
   }
 
