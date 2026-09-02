@@ -57,7 +57,7 @@ export default function CourseList() {
 
           return (
             <Link key={curso.id} href={`/cursos/${curso.slug}`} className="group">
-              <Card className="h-full overflow-hidden transition-all duration-300 bg-white border-rose-100 hover:border-rose-300 hover:shadow-md">
+              <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 bg-white border-rose-100 hover:border-rose-300 hover:shadow-md">
                 <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "1/1", minHeight: "200px" }}>
                   {curso.video ? (
                     <video
@@ -78,7 +78,7 @@ export default function CourseList() {
                   </Badge>
                 </div>
 
-                <CardContent className="p-4">
+                <CardContent className="p-4 flex flex-col flex-1">
                   <h3 className="text-center text-sm uppercase tracking-[0.05em] font-medium text-rose-700/90 mb-2 leading-snug">
                     {curso.titulo}
                   </h3>
@@ -87,27 +87,27 @@ export default function CourseList() {
                     <span className="text-2xl font-bold text-rose-700">R$ {valorExibido.toFixed(2).replace(".", ",")}</span>
                   </div>
 
-                  <div className="mb-2 rounded-lg bg-rose-50 border border-rose-100 py-1.5 text-center">
-                    <p className="text-[10px] uppercase tracking-[0.15em] text-rose-400 font-medium">Próxima turma</p>
-                    <p className="text-sm font-semibold text-rose-700">
-                      {formatarDataBrasil(dataExibida)}
-                    </p>
-                    <p className="text-[11px] text-rose-500 mt-0.5">Duração: {duracaoProxima}</p>
-                  </div>
-
-                  {segunda?.data && (
-                    <div className="mb-2 rounded-lg bg-pink-50 border border-pink-200 py-1.5 px-2 text-center">
-                      <p className="text-[10px] uppercase tracking-[0.15em] text-pink-500 font-semibold">
-                        Também tem turma
+                    <div className="mb-2 rounded-lg bg-rose-50 border border-rose-100 py-1.5 text-center">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-rose-400 font-medium">Próxima turma</p>
+                      <p className="text-sm font-semibold text-rose-700">
+                        {formatarDataBrasil(dataExibida)}
                       </p>
-                      <p className="text-sm font-semibold text-pink-700">
-                        {formatarDataBrasil(segunda.data)}
-                      </p>
-                      <p className="text-[11px] text-pink-500 mt-0.5">Duração: {duracaoSegunda}</p>
+                      <p className="text-[11px] text-rose-500 mt-0.5">Duração: {duracaoProxima}</p>
                     </div>
-                  )}
 
-                  <div className="mt-3">
+                    {segunda?.data && (
+                      <div className="mb-2 rounded-lg bg-pink-50 border border-pink-200 py-1.5 px-2 text-center">
+                        <p className="text-[10px] uppercase tracking-[0.15em] text-pink-500 font-semibold">
+                          Também tem turma
+                        </p>
+                        <p className="text-sm font-semibold text-pink-700">
+                          {formatarDataBrasil(segunda.data)}
+                        </p>
+                        <p className="text-[11px] text-pink-500 mt-0.5">Duração: {duracaoSegunda}</p>
+                      </div>
+                    )}
+
+                  <div className="mt-auto pt-3">
                     <div className="flex items-center justify-between text-xs text-rose-400 mb-1">
                       <span>VAGAS</span>
                       <span className="font-medium text-rose-600">
