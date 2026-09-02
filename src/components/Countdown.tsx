@@ -63,7 +63,7 @@ export default function Countdown() {
             href="#cursos"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-sm uppercase tracking-[0.15em] font-medium shadow-lg transition-all duration-300 bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-rose-300/40 hover:shadow-rose-400/60 hover:scale-105"
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-12 h-12">
               <circle cx="12" cy="8" r="4" />
               <path d="M4 21c0-3.87 3.58-6 8-6s8 2.13 8 6" />
             </svg>
