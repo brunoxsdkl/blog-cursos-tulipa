@@ -46,6 +46,11 @@ export default function CourseCard({ curso, preco, data, horario }: { curso: Cur
           <p className="text-sm text-rose-500 line-clamp-3 leading-relaxed">
             {curso.descricao}
           </p>
+          <div className="mt-3 flex justify-center">
+            <span className="inline-flex items-center gap-1 rounded-full bg-rose-600/10 border border-rose-200 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-rose-600 font-semibold">
+              Curso realizado aos sábados
+            </span>
+          </div>
         </CardContent>
         <CardFooter className="px-5 pb-4 pt-0 flex flex-col gap-4 text-xs text-rose-400">
           <div className="flex items-center gap-4">
