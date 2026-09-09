@@ -98,6 +98,12 @@ export default function CourseList() {
                     <span className="inline-flex items-center gap-1"><Gift className="w-3.5 h-3.5 shrink-0" /> Leva as amostras produzidas</span>
                   </div>
 
+                  <div className="mb-2 flex justify-center">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-rose-600/10 border border-rose-200 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-rose-600 font-semibold">
+                      Curso realizado aos sábados
+                    </span>
+                  </div>
+
                     <div className="mb-2 rounded-lg bg-rose-50 border border-rose-100 py-1.5 text-center">
                       <p className="text-[10px] uppercase tracking-[0.15em] text-rose-400 font-medium">Próxima turma</p>
                       <p className="text-sm font-semibold text-rose-700">
