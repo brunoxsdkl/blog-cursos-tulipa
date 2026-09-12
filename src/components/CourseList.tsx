@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { formatarDuracao } from "@/lib/duracao"
 import { formatarDataBrasil, proximaDataISO } from "@/lib/data"
-import { BookOpen, Package, Coffee, Gift } from "lucide-react"
+import { BookOpen, Package, Coffee, Gift, Clock, MapPin } from "lucide-react"
 
 const VAGAS_TOTAIS = 20
 
@@ -123,6 +123,16 @@ export default function CourseList() {
                         <p className="text-[11px] text-pink-500 mt-0.5">Duração: {duracaoSegunda}</p>
                       </div>
                     )}
+
+                    <div className="mb-3 rounded-lg bg-amber-50 border border-amber-100 py-1.5 px-2 text-center">
+                      <p className="text-[10px] uppercase tracking-[0.15em] text-amber-600 font-semibold inline-flex items-center gap-1 justify-center">
+                        <Clock className="w-3 h-3" /> Horário
+                      </p>
+                      <p className="text-sm font-semibold text-amber-700">8:30 às 12:00</p>
+                      <p className="text-[10px] text-amber-600 mt-0.5 inline-flex items-center gap-1 justify-center leading-snug">
+                        <MapPin className="w-3 h-3 shrink-0" /> Loja Cajuru - R. Amador Bueno, 44 - Cajuru, Curitiba - PR, 82960-020
+                      </p>
+                    </div>
 
                   <div className="mt-auto pt-3">
                     <div className="flex items-center justify-between text-xs text-rose-400 mb-1">
