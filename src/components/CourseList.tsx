@@ -9,8 +9,6 @@ import { formatarDuracao } from "@/lib/duracao"
 import { formatarDataBrasil, proximaDataISO } from "@/lib/data"
 import { BookOpen, Package, Coffee, Gift, Clock, MapPin } from "lucide-react"
 
-const VAGAS_TOTAIS = 20
-
 type Turma = { data?: string | null; horario_inicio?: string | null; horario_termino?: string | null; vagas_totais: number; vagas_preenchidas: number }
 type InfoVaga = { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null; turmas?: Turma[] }
 
@@ -48,9 +46,6 @@ export default function CourseList() {
               : []
           const proxima = turmas[0]
           const segunda = turmas[1]
-          const total = proxima?.vagas_totais ?? VAGAS_TOTAIS
-          const preenchidas = proxima?.vagas_preenchidas ?? 0
-          const restantes = Math.max(0, total - preenchidas)
           const valorExibido = (typeof info?.valor === "number" && info.valor > 0) ? info.valor : curso.preco
           const dataExibida = proxima?.data || proximaDataISO(curso.datas)
           const duracaoProxima = formatarDuracao(proxima?.horario_inicio, proxima?.horario_termino, curso.tempoLeitura)
@@ -125,23 +120,6 @@ export default function CourseList() {
                     )}
 
                   <div className="mt-auto pt-3">
-                    <div className="flex items-center justify-between text-xs text-rose-400 mb-1">
-                      <span>VAGAS</span>
-                      <span className="font-medium text-rose-600">
-                        {preenchidas}/{total} PREENCHIDAS
-                      </span>
-                    </div>
-                    <div className="w-full h-2 bg-rose-100 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-rose-400 to-pink-400 rounded-full transition-all duration-500"
-                        style={{ width: `${total > 0 ? (preenchidas / total) * 100 : 0}%` }}
-                      />
-                    </div>
-                    <p className="text-[11px] text-rose-500 mt-1.5 font-medium">
-                      {restantes > 0
-                        ? `${restantes} ${restantes === 1 ? "VAGA RESTANTE" : "VAGAS RESTANTES"}`
-                        : "VAGAS ESGOTADAS"}
-                    </p>
                     <div className="mt-3 rounded-lg bg-amber-50 border border-amber-100 py-1.5 px-2 text-center">
                       <p className="text-[10px] uppercase tracking-[0.15em] text-amber-600 font-semibold inline-flex items-center gap-1 justify-center">
                         <Clock className="w-3 h-3" /> Horário
