@@ -45,11 +45,10 @@ export default function CourseList() {
               ? [{ data: info.data, horario_inicio: info.horario_inicio, horario_termino: info.horario_termino, vagas_totais: info.vagas_totais, vagas_preenchidas: info.vagas_preenchidas }]
               : []
           const proxima = turmas[0]
-          const segunda = turmas[1]
+          const demaisTurmas = turmas.slice(1)
           const valorExibido = (typeof info?.valor === "number" && info.valor > 0) ? info.valor : curso.preco
           const dataExibida = proxima?.data || proximaDataISO(curso.datas)
           const duracaoProxima = formatarDuracao(proxima?.horario_inicio, proxima?.horario_termino, curso.tempoLeitura)
-          const duracaoSegunda = formatarDuracao(segunda?.horario_inicio, segunda?.horario_termino, curso.tempoLeitura)
 
           return (
             <Link key={curso.id} href={`/cursos/${curso.slug}`} className="group">
@@ -107,17 +106,17 @@ export default function CourseList() {
                       <p className="text-[11px] text-rose-500 mt-0.5">Duração: {duracaoProxima}</p>
                     </div>
 
-                    {segunda?.data && (
-                      <div className="mb-2 rounded-lg bg-pink-50 border border-pink-200 py-1.5 px-2 text-center">
+                    {demaisTurmas.map((turma, i) => (
+                      <div key={`${turma.data}-${i}`} className="mb-2 rounded-lg bg-pink-50 border border-pink-200 py-1.5 px-2 text-center">
                         <p className="text-[10px] uppercase tracking-[0.15em] text-pink-500 font-semibold">
                           Também tem turma
                         </p>
                         <p className="text-sm font-semibold text-pink-700">
-                          {formatarDataBrasil(segunda.data)}
+                          {turma.data ? formatarDataBrasil(turma.data) : "A definir"}
                         </p>
-                        <p className="text-[11px] text-pink-500 mt-0.5">Duração: {duracaoSegunda}</p>
+                        <p className="text-[11px] text-pink-500 mt-0.5">Duração: {formatarDuracao(turma.horario_inicio, turma.horario_termino, curso.tempoLeitura)}</p>
                       </div>
-                    )}
+                    ))}
 
                   <div className="mt-auto pt-3">
                     <div className="mt-3 rounded-lg bg-amber-50 border border-amber-100 py-1.5 px-2 text-center">
