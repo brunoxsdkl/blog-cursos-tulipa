@@ -87,6 +87,12 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center justify-center flex-1 gap-8">
+            <Link
+              href="/interesse"
+              className="shrink-0 text-sm uppercase tracking-[0.15em] font-medium text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 px-4 py-2 rounded-full shadow-lg shadow-rose-200 transition-all duration-300"
+            >
+              Quero fazer curso
+            </Link>
             {categorias
               .filter((cat) => cat.slug !== "faca-lucre")
               .map((cat) => (
@@ -104,12 +110,6 @@ export default function Header() {
             <Link href="/criacoes" className={NAV_LINK}>
               Criações Dona Tulipa
             </Link>
-            <Link
-              href="/interesse"
-              className="text-sm uppercase tracking-[0.15em] font-medium text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 px-4 py-2 rounded-full shadow-lg shadow-rose-200 transition-all duration-300"
-            >
-              Quero fazer curso
-            </Link>
           </nav>
 
           <button
@@ -124,6 +124,13 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden bg-gradient-to-b from-white/90 to-rose-50/90 backdrop-blur-xl border-t border-white/30">
           <div className="px-4 py-4 flex flex-col gap-1">
+            <Link
+              href="/interesse"
+              onClick={() => setMobileOpen(false)}
+              className="px-4 py-3 text-white bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl text-sm uppercase tracking-wider"
+            >
+              Quero fazer curso
+            </Link>
             {categorias
               .filter((cat) => cat.slug !== "faca-lucre")
               .map((cat) => (
@@ -145,13 +152,6 @@ export default function Header() {
               className={NAV_LINK_MOBILE}
             >
               Criações Dona Tulipa
-            </Link>
-            <Link
-              href="/interesse"
-              onClick={() => setMobileOpen(false)}
-              className="px-4 py-3 text-white bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl text-sm uppercase tracking-wider"
-            >
-              Quero fazer curso
             </Link>
           </div>
         </div>

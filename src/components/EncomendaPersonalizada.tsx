@@ -25,16 +25,22 @@ export default function EncomendaPersonalizada() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 px-7 py-3 text-xs uppercase tracking-[0.12em] text-white shadow-[0_10px_30px_rgba(244,63,94,0.35)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(244,63,94,0.45)]"
+              className="group relative inline-flex flex-col items-center gap-1 overflow-hidden rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 px-7 py-3 text-white shadow-[0_14px_38px_rgba(244,63,94,0.40)] ring-1 ring-white/30 transition-all hover:-translate-y-0.5 hover:shadow-[0_20px_50px_rgba(244,63,94,0.50)]"
             >
-              <img
-                src="/whatsapp.png"
-                alt=""
-                aria-hidden="true"
-                className="h-4 w-4 rounded-full"
-              />
-              <MessageCircle className="h-4 w-4" />
-              Fale já com uma consultora
+              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/25 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <span className="relative flex items-center justify-center gap-2 text-xs uppercase tracking-[0.14em]">
+                <img
+                  src="/whatsapp.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-4 w-4 rounded-full"
+                />
+                <MessageCircle className="h-4 w-4" />
+                Fale já com uma consultora
+              </span>
+              <span className="relative rounded-full bg-white/20 px-2.5 py-0.5 text-[9px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+                Trabalhamos com encomendas
+              </span>
             </a>
             <span className="text-xs text-rose-500/80">
               e receba sua cotação personalizada agora mesmo
