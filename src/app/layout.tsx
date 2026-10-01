@@ -1,35 +1,18 @@
 import type { Metadata } from "next"
-import { Playfair_Display, Inter } from "next/font/google"
+import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import WhatsAppFloating from "@/components/WhatsAppFloating"
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/toaster"
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-heading",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 
 export const metadata: Metadata = {
-  title: "Blog de Cursos | Dona Tulipa",
+  title: "Dona Tulipa | Cursos e Criações Artesanais",
   description:
-    "Transforme criatividade em renda com nossos cursos artesanais. Saboaria, velas, cosméticos e muito mais.",
-  icons: {
-    icon: "/logo.png?v=2",
-    shortcut: "/logo.png?v=2",
-    apple: "/logo.png?v=2",
-  },
-  openGraph: {
-    title: "Blog de Cursos | Dona Tulipa",
-    description: "Transforme criatividade em renda com nossos cursos artesanais.",
-    type: "website",
-  },
+    "Cursos de artesanato, velas, cosméticos e perfumaria com Andréia Freitas. Crie, encante e lucre.",
 }
 
 export default function RootLayout({
@@ -41,7 +24,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white`}>
         <Header />
-        <main className="min-h-screen pt-28 sm:pt-40">{children}</main>
+        <main className="min-h-screen pt-28 sm:pt-60">{children}</main>
         <Footer />
         <WhatsAppFloating />
         <Toaster />
