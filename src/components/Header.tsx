@@ -114,13 +114,6 @@ export default function Header() {
                 Faça também sua encomenda!
               </span>
             </Link>
-
-            <Link
-              href="/interesse"
-              className="shrink-0 whitespace-nowrap text-sm uppercase tracking-[0.12em] font-medium text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 px-4 py-2 rounded-full shadow-lg shadow-rose-200 transition-all duration-300"
-            >
-              Quero fazer curso
-            </Link>
           </nav>
 
           <button
@@ -155,17 +148,10 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="flex flex-col items-start gap-0.5 rounded-xl bg-gradient-to-r from-amber-500 via-pink-500 to-rose-500 px-4 py-3 text-white shadow-md"
             >
-              <span className="text-sm uppercase tracking-wider">Criações Dona Tulipa</span>
               <span className="rounded-full bg-black/15 px-2 py-0.5 text-[9px] uppercase tracking-[0.18em]">
                 Faça também sua encomenda!
               </span>
-            </Link>
-            <Link
-              href="/interesse"
-              onClick={() => setMobileOpen(false)}
-              className="mt-1 px-4 py-3 text-white bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl text-sm uppercase tracking-wider"
-            >
-              Quero fazer curso
+              <span className="text-sm uppercase tracking-wider">Criações Dona Tulipa</span>
             </Link>
           </div>
         </div>
