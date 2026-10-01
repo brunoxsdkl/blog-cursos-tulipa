@@ -79,6 +79,8 @@ export default function Countdown() {
               src="/consultora-elaine.jpeg"
               alt="Consultora"
               className="w-12 h-12 rounded-full object-cover ring-2 ring-white/90"
+              loading="lazy"
+              decoding="async"
             />
             FALE COM UM CONSULTOR
           </a>

@@ -83,7 +83,7 @@ export default function Banner() {
           }`}
         >
           <img
-            src="/banner.png"
+            src="/banner.webp"
             alt="Banner Dona Tulipa"
             className="absolute inset-0 w-full h-full object-contain"
             draggable={false}

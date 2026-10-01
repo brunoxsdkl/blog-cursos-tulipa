@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import { X, ChevronLeft, ChevronRight, Play, Heart } from "lucide-react"
+import LazyVideo from "@/components/LazyVideo"
 
 // ── Dados ──────────────────────────────────────────────
 
@@ -80,7 +81,10 @@ function Lightbox({ idx, onClose, onPrev, onNext }: {
         </button>
         <div className="rounded-xl overflow-hidden bg-black/10 shadow-2xl">
           {item.tipo === "img" ? (
-            <img src={item.src} alt={item.legenda} className="w-full max-h-[75vh] object-contain" />
+            <img src={item.src} alt={item.legenda} className="w-full max-h-[75vh] object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           ) : (
             <video src={item.src} className="w-full max-h-[75vh] bg-black" controls autoPlay playsInline />
           )}
@@ -160,9 +164,10 @@ function CardVertical({ src, tipo, legenda, index, onClick }: {
             draggable={false} />
         ) : (
           <div className="relative h-full">
-            <video src={src}
+            <LazyVideo
+              src={src}
               className="w-full h-full object-cover sm:aspect-[9/16]"
-              autoPlay muted loop playsInline preload="none" />
+            />
             <PlayOverlay />
           </div>
         )}
@@ -188,9 +193,10 @@ function CardSquare({ src, legenda, index, onClick }: {
       onKeyDown={(e) => { if (e.key === "Enter") onClick() }}>
       <div className="relative overflow-hidden rounded-xl bg-white shadow-[0_1px_6px_rgba(244,63,94,0.04)] ring-1 ring-rose-200/15 transition-all duration-400 hover:shadow-[0_8px_30px_rgba(244,63,94,0.1)] hover:ring-rose-300/30 hover:-translate-y-0.5">
         <div className="relative">
-          <video src={src}
+          <LazyVideo
+            src={src}
             className="w-full aspect-square object-cover"
-            autoPlay muted loop playsInline preload="none" />
+          />
           <PlayOverlay />
         </div>
         <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/35 via-black/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-400 pointer-events-none">

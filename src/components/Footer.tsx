@@ -7,7 +7,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="mb-3">
-              <img src="/logo.png" alt="Dona Tulipa" className="h-28 sm:h-32 w-auto" />
+              <img src="/logo.webp" alt="Dona Tulipa" className="h-28 sm:h-32 w-auto"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
           <div>
@@ -35,8 +38,14 @@ export default function Footer() {
         <div className="py-8 border-t border-rose-100">
           <h3 className="text-center text-sm font-semibold text-rose-800 mb-4">PATROCINADORES</h3>
           <div className="flex justify-center gap-16 flex-wrap">
-            <img src="/LOGO HALLSTAR.png" alt="Hallstar" className="h-12 w-auto" />
-            <img src="/nossa terra.png" alt="Nossa Terra" className="h-24 w-auto" />
+            <img src="/LOGO HALLSTAR.png" alt="Hallstar" className="h-12 w-auto"
+              loading="lazy"
+              decoding="async"
+            />
+            <img src="/nossa-terra.webp" alt="Nossa Terra" className="h-24 w-auto"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
         <div className="pt-6 border-t border-rose-100 text-center">

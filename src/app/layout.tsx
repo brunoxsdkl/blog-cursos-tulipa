@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   description:
     "Transforme criatividade em renda com nossos cursos artesanais. Saboaria, velas, cosméticos e muito mais.",
   icons: {
-    icon: "/logo.png?v=2",
-    shortcut: "/logo.png?v=2",
-    apple: "/logo.png?v=2",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   openGraph: {
     title: "Blog de Cursos | Dona Tulipa",
@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-white`}>
         <Header />
-        <main className="min-h-screen pt-24 sm:pt-36">{children}</main>
+        <main className="min-h-screen pt-[7.5rem] sm:pt-[9.25rem]">{children}</main>
         <Footer />
         <WhatsAppFloating />
         <Toaster />

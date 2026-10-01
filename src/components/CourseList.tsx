@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { formatarDuracao } from "@/lib/duracao"
 import { formatarDataBrasil, proximaDataISO } from "@/lib/data"
 import { BookOpen, Package, Coffee, Gift, Clock, MapPin } from "lucide-react"
+import LazyVideo from "@/components/LazyVideo"
 
 type Turma = { data?: string | null; horario_inicio?: string | null; horario_termino?: string | null; vagas_totais: number; vagas_preenchidas: number }
 type InfoVaga = { vagas_totais: number; vagas_preenchidas: number; valor?: number; data?: string | null; horario_inicio?: string | null; horario_termino?: string | null; turmas?: Turma[] }
@@ -55,13 +56,9 @@ export default function CourseList() {
               <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 bg-white border-rose-100 hover:border-rose-300 hover:shadow-md">
                 <div className="relative w-full overflow-hidden rounded-xl" style={{ aspectRatio: "1/1", minHeight: "200px" }}>
                   {curso.video ? (
-                    <video
+                    <LazyVideo
                       src={curso.video}
                       className="absolute inset-0 w-full h-full object-cover rounded-xl"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
                     />
                   ) : (
                     <div className="absolute inset-0 bg-gradient-to-br from-rose-100 via-rose-50 to-pink-50 flex items-center justify-center">

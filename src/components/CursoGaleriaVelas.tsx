@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import { X, ChevronLeft, ChevronRight, Play, Heart } from "lucide-react"
+import LazyVideo from "@/components/LazyVideo"
 
 const hero = {
   src: "/velas.mp4",
@@ -123,9 +124,10 @@ function CardHero({ src, tipo, legenda, onClick }: {
             draggable={false} />
         ) : (
           <div className="relative">
-            <video src={src}
+            <LazyVideo
+              src={src}
               className="w-full aspect-[16/9] sm:aspect-[21/9] object-cover"
-              autoPlay muted loop playsInline preload="none" />
+            />
             <PlayOverlay />
           </div>
         )}
@@ -150,9 +152,10 @@ function CardVertical({ src, tipo, legenda, index, onClick }: {
       onKeyDown={(e) => { if (e.key === "Enter") onClick() }}>
       <div className="relative overflow-hidden rounded-xl bg-white shadow-[0_2px_16px_rgba(244,63,94,0.08)] ring-1 ring-rose-300/30 transition-all duration-400 hover:shadow-[0_10px_34px_rgba(244,63,94,0.13)] hover:ring-rose-300/50 hover:-translate-y-0.5 h-full">
         <div className="relative h-full">
-          <video src={src}
+          <LazyVideo
+            src={src}
             className="w-full h-full object-cover sm:aspect-[9/16]"
-            autoPlay muted loop playsInline preload="none" />
+          />
           <PlayOverlay />
         </div>
         <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/40 via-black/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-400 pointer-events-none">
@@ -175,9 +178,10 @@ function CardSquare({ src, legenda, index, onClick }: {
       onKeyDown={(e) => { if (e.key === "Enter") onClick() }}>
       <div className="relative overflow-hidden rounded-xl bg-white shadow-[0_1px_6px_rgba(244,63,94,0.04)] ring-1 ring-rose-200/15 transition-all duration-400 hover:shadow-[0_8px_30px_rgba(244,63,94,0.1)] hover:ring-rose-300/30 hover:-translate-y-0.5">
         <div className="relative">
-          <video src={src}
+          <LazyVideo
+            src={src}
             className="w-full aspect-square object-cover"
-            autoPlay muted loop playsInline preload="none" />
+          />
           <PlayOverlay />
         </div>
         <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/35 via-black/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-400 pointer-events-none">

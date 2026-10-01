@@ -30,10 +30,12 @@ export default function EncomendaPersonalizada() {
               <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/25 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <span className="relative flex items-center justify-center gap-2 text-xs uppercase tracking-[0.14em]">
                 <img
-                  src="/whatsapp.png"
+                  src="/whatsapp.webp"
                   alt=""
                   aria-hidden="true"
                   className="h-4 w-4 rounded-full"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <MessageCircle className="h-4 w-4" />
                 Fale já com uma consultora
@@ -55,6 +57,8 @@ export default function EncomendaPersonalizada() {
               src="/consultora-elaine.jpeg"
               alt="Elaine, consultora do Ateliê Andréia Freitas"
               className="relative h-40 w-40 rounded-full border-4 border-white object-cover shadow-[0_14px_40px_rgba(244,63,94,0.30)] sm:h-48 sm:w-48"
+              loading="lazy"
+              decoding="async"
             />
             <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-rose-600 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-white shadow-lg">
               Elaine • Consultora

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import { X, ChevronLeft, ChevronRight, Play, Heart } from "lucide-react"
+import LazyVideo from "@/components/LazyVideo"
 
 const hero = {
   src: "/cosmeticos-principal.jpg",
@@ -74,7 +75,10 @@ function Lightbox({ idx, onClose, onPrev, onNext }: {
         </button>
         <div className="rounded-xl overflow-hidden bg-black/10 shadow-2xl">
           {item.tipo === "img" ? (
-            <img src={item.src} alt={item.legenda} className="w-full max-h-[75vh] object-contain" />
+            <img src={item.src} alt={item.legenda} className="w-full max-h-[75vh] object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           ) : (
             <video src={item.src} className="w-full max-h-[75vh] bg-black" controls autoPlay playsInline />
           )}
@@ -148,9 +152,10 @@ function CardVertical({ src, tipo, legenda, index, onClick }: {
             draggable={false} />
         ) : (
           <div className="relative h-full">
-            <video src={src}
+            <LazyVideo
+              src={src}
               className="w-full h-full object-cover sm:aspect-[9/16]"
-              autoPlay muted loop playsInline preload="none" />
+            />
             <PlayOverlay />
           </div>
         )}
@@ -179,9 +184,10 @@ function CardSquare({ src, tipo, legenda, index, onClick }: {
             draggable={false} />
         ) : (
           <div className="relative">
-            <video src={src}
+            <LazyVideo
+              src={src}
               className="w-full aspect-square object-cover"
-              autoPlay muted loop playsInline preload="none" />
+            />
             <PlayOverlay />
           </div>
         )}

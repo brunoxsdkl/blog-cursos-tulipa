@@ -57,7 +57,7 @@ export const categoriasCriacoes: CategoriaCriacao[] = [
     nome: "Artesanato",
     resumo:
       "Peças decorativas e presentes autorais, feitas com materiais naturais e Alma de ateliê.",
-    capa: "/nossa terra.png",
+    capa: "/nossa-terra.webp",
     capaTipo: "img",
     midias: [
       { src: "/foto-principal.jpg", tipo: "img", legenda: "Ateliê Dona Tulipa" },
