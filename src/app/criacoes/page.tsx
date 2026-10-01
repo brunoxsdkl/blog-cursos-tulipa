@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Sparkles } from "lucide-react"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import CardCategoriaCriacao from "@/components/CardCategoriaCriacao"
+import EncomendaPersonalizada from "@/components/EncomendaPersonalizada"
 import { categoriasCriacoes } from "@/data/criacoes"
 
 export const metadata: Metadata = {
@@ -46,6 +47,8 @@ export default function CriacoesPage() {
       <p className="mt-8 text-center text-xs uppercase tracking-[0.2em] text-rose-300">
         Novas criações sendo selecionadas
       </p>
+
+      <EncomendaPersonalizada />
 
       <div className="mt-12 rounded-3xl border border-white/60 bg-gradient-to-r from-rose-500 to-pink-500 p-8 text-center text-white shadow-[0_16px_50px_rgba(244,63,94,0.25)] sm:p-10">
         <h2 className="font-heading text-2xl font-bold sm:text-3xl">Quer aprender a fazer?</h2>
