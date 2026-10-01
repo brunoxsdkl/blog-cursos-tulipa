@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner"
+import BannerPromo from "@/components/BannerPromo"
 import CourseList from "@/components/CourseList"
 import CTABanner from "@/components/CTABanner"
 import Countdown from "@/components/Countdown"
@@ -7,6 +8,7 @@ export default function Home() {
   return (
     <>
       <Banner />
+      <BannerPromo />
       <Countdown />
       <CourseList />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
