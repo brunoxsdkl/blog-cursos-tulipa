@@ -1,18 +1,35 @@
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
+import { Playfair_Display, Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import WhatsAppFloating from "@/components/WhatsAppFloating"
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/sonner"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-heading",
+})
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
-  title: "Dona Tulipa | Cursos e Criações Artesanais",
+  title: "Blog de Cursos | Dona Tulipa",
   description:
-    "Cursos de artesanato, velas, cosméticos e perfumaria com Andréia Freitas. Crie, encante e lucre.",
+    "Transforme criatividade em renda com nossos cursos artesanais. Saboaria, velas, cosméticos e muito mais.",
+  icons: {
+    icon: "/logo.png?v=2",
+    shortcut: "/logo.png?v=2",
+    apple: "/logo.png?v=2",
+  },
+  openGraph: {
+    title: "Blog de Cursos | Dona Tulipa",
+    description: "Transforme criatividade em renda com nossos cursos artesanais.",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
