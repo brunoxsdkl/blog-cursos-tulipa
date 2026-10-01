@@ -81,18 +81,12 @@ export default function Header() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-20 sm:h-32">
+        <div className="flex items-center pt-4 sm:pt-6">
           <Link href="/" className="flex-shrink-0 mr-4 sm:mr-16">
-            <img src="/logo.png" alt="Dona Tulipa" className="h-16 sm:h-32 w-auto" />
+            <img src="/logo.png" alt="Dona Tulipa" className="h-16 sm:h-28 w-auto" />
           </Link>
 
           <nav className="hidden md:flex items-center justify-center flex-1 gap-8">
-            <Link
-              href="/interesse"
-              className="shrink-0 text-sm uppercase tracking-[0.15em] font-medium text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 px-4 py-2 rounded-full shadow-lg shadow-rose-200 transition-all duration-300"
-            >
-              Quero fazer curso
-            </Link>
             {categorias
               .filter((cat) => cat.slug !== "faca-lucre")
               .map((cat) => (
@@ -107,9 +101,6 @@ export default function Header() {
                   {cat.nome}
                 </Link>
               ))}
-            <Link href="/criacoes" className={NAV_LINK}>
-              Criações Dona Tulipa
-            </Link>
           </nav>
 
           <button
@@ -119,18 +110,33 @@ export default function Header() {
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
+
+        <div className="hidden md:flex items-center justify-center gap-4 pb-5 pt-3">
+          <Link
+            href="/interesse"
+            className="shrink-0 text-sm uppercase tracking-[0.15em] font-medium text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 px-6 py-2.5 rounded-full shadow-lg shadow-rose-200 transition-all duration-300"
+          >
+            Quero fazer curso
+          </Link>
+
+          <Link
+            href="/criacoes"
+            className="group relative inline-flex flex-col items-center gap-0.5 overflow-hidden rounded-2xl bg-gradient-to-r from-amber-500 via-pink-500 to-rose-500 px-5 py-1.5 text-white shadow-lg shadow-pink-200 ring-1 ring-white/40 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            <span className="relative rounded-full bg-black/15 px-2.5 py-0.5 text-[9px] uppercase tracking-[0.18em] text-white backdrop-blur-sm">
+              Faça também sua encomenda!
+            </span>
+            <span className="relative font-heading text-sm uppercase tracking-[0.12em] font-semibold">
+              Criações Dona Tulipa
+            </span>
+          </Link>
+        </div>
       </div>
 
       {mobileOpen && (
         <div className="md:hidden bg-gradient-to-b from-white/90 to-rose-50/90 backdrop-blur-xl border-t border-white/30">
           <div className="px-4 py-4 flex flex-col gap-1">
-            <Link
-              href="/interesse"
-              onClick={() => setMobileOpen(false)}
-              className="px-4 py-3 text-white bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl text-sm uppercase tracking-wider"
-            >
-              Quero fazer curso
-            </Link>
             {categorias
               .filter((cat) => cat.slug !== "faca-lucre")
               .map((cat) => (
@@ -149,9 +155,19 @@ export default function Header() {
             <Link
               href="/criacoes"
               onClick={() => setMobileOpen(false)}
-              className={NAV_LINK_MOBILE}
+              className="flex flex-col items-start gap-0.5 rounded-xl bg-gradient-to-r from-amber-500 via-pink-500 to-rose-500 px-4 py-3 text-white shadow-md"
             >
-              Criações Dona Tulipa
+              <span className="rounded-full bg-black/15 px-2 py-0.5 text-[9px] uppercase tracking-[0.18em]">
+                Faça também sua encomenda!
+              </span>
+              <span className="text-sm uppercase tracking-wider">Criações Dona Tulipa</span>
+            </Link>
+            <Link
+              href="/interesse"
+              onClick={() => setMobileOpen(false)}
+              className="mt-1 px-4 py-3 text-white bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl text-sm uppercase tracking-wider"
+            >
+              Quero fazer curso
             </Link>
           </div>
         </div>
