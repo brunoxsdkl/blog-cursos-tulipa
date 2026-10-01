@@ -5,6 +5,12 @@ import { Menu, X, ShoppingCart } from "lucide-react"
 import { categorias, getCursosPorCategoria } from "@/data/cursos"
 import Link from "next/link"
 
+const NAV_LINK =
+  "relative text-sm uppercase tracking-[0.15em] font-medium text-rose-700/80 hover:text-rose-900 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-rose-400 after:transition-all after:duration-300 hover:after:w-full"
+
+const NAV_LINK_MOBILE =
+  "px-4 py-3 text-rose-700 hover:text-rose-900 border-l-2 border-transparent hover:border-rose-400 transition-all duration-300 text-sm uppercase tracking-wider"
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -81,18 +87,23 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center justify-center flex-1 gap-8">
-            {categorias.map((cat) => (
-              <Link
-                key={cat.slug}
-                href={(() => {
-                  const curso = getCursosPorCategoria(cat.slug)
-                  return curso.length > 0 ? `/cursos/${curso[0].slug}` : "/"
-                })()}
-                className="relative text-sm uppercase tracking-[0.15em] font-medium text-rose-700/80 hover:text-rose-900 transition-colors duration-300 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-rose-400 after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {cat.nome}
-              </Link>
-            ))}
+            {categorias
+              .filter((cat) => cat.slug !== "faca-lucre")
+              .map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={(() => {
+                    const curso = getCursosPorCategoria(cat.slug)
+                    return curso.length > 0 ? `/cursos/${curso[0].slug}` : "/"
+                  })()}
+                  className={NAV_LINK}
+                >
+                  {cat.nome}
+                </Link>
+              ))}
+            <Link href="/criacoes" className={NAV_LINK}>
+              Criações Dona Tulipa
+            </Link>
             <Link
               href="/interesse"
               className="text-sm uppercase tracking-[0.15em] font-medium text-white bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 px-4 py-2 rounded-full shadow-lg shadow-rose-200 transition-all duration-300"
@@ -113,19 +124,28 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden bg-gradient-to-b from-white/90 to-rose-50/90 backdrop-blur-xl border-t border-white/30">
           <div className="px-4 py-4 flex flex-col gap-1">
-            {categorias.map((cat) => (
-              <Link
-                key={cat.slug}
-                href={(() => {
-                  const curso = getCursosPorCategoria(cat.slug)
-                  return curso.length > 0 ? `/cursos/${curso[0].slug}` : "/"
-                })()}
-                onClick={() => setMobileOpen(false)}
-                className="px-4 py-3 text-rose-700 hover:text-rose-900 border-l-2 border-transparent hover:border-rose-400 transition-all duration-300 text-sm uppercase tracking-wider"
-              >
-                {cat.nome}
-              </Link>
-            ))}
+            {categorias
+              .filter((cat) => cat.slug !== "faca-lucre")
+              .map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={(() => {
+                    const curso = getCursosPorCategoria(cat.slug)
+                    return curso.length > 0 ? `/cursos/${curso[0].slug}` : "/"
+                  })()}
+                  onClick={() => setMobileOpen(false)}
+                  className={NAV_LINK_MOBILE}
+                >
+                  {cat.nome}
+                </Link>
+              ))}
+            <Link
+              href="/criacoes"
+              onClick={() => setMobileOpen(false)}
+              className={NAV_LINK_MOBILE}
+            >
+              Criações Dona Tulipa
+            </Link>
             <Link
               href="/interesse"
               onClick={() => setMobileOpen(false)}
