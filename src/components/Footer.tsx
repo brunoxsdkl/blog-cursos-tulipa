@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Footer() {
   return (
     <footer className="border-t border-rose-100 bg-white">
@@ -12,6 +14,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-rose-800 mb-3">Cursos</h4>
             <ul className="space-y-2">
               <li><a href="/interesse" className="text-sm font-semibold text-rose-600 hover:text-rose-800 transition-colors">Quero fazer um curso</a></li>
+              <li><Link href="/criacoes" className="text-sm text-rose-500 hover:text-rose-700 transition-colors">Criações Dona Tulipa</Link></li>
               <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Saboaria Artesanal</li>
               <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Velas Artesanais</li>
               <li className="text-sm text-rose-500 hover:text-rose-700 cursor-pointer">Cosméticos & Perfumaria</li>
