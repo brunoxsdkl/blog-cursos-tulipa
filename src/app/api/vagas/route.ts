@@ -4,15 +4,15 @@ import { supabase } from "@/lib/supabase"
 const cursosDoBlog: { slug: string; nomes: string[] }[] = [
   {
     slug: "saboaria-artesanal-modulo-1",
-    nomes: ["Saboaria Artesanal", "Saboaria Artesanal – Módulo 1"],
+    nomes: ["Saboaria Artesanal", "Saboaria Artesanal – Módulo 1", "Saboaria Básica", "Saboaria Fitoterápica", "Saboaria Artesanal – Módulo 2"],
   },
   {
     slug: "velas-artesanais-completo",
-    nomes: ["Velas Artesanais", "Velas Artesanais – Apostila Completa", "Velas Artesanais – Apostila", "Velas Artesanais – Módulo 1", "Velas Artesanais - Modulo 1"],
+    nomes: ["Velas Artesanais", "Velas Artesanais – Apostila Completa", "Velas Artesanais – Apostila", "Velas Artesanais – Módulo 1", "Velas Artesanais - Modulo 1", "Velas Artesanais 2", "Velas Artesanais – Módulo 2"],
   },
   {
     slug: "cosmeticos-perfumaria-completo",
-    nomes: ["Cosméticos & Perfumaria Artesanal", "Cosmeticos & Perfumaria Artesanal", "Cosméticos & Perfumaria", "Cosmeticos & Perfumaria", "Cosméticos & Perfumaria – Módulo 1", "Cosmeticos & Perfumaria - Modulo 1"],
+    nomes: ["Cosméticos & Perfumaria Artesanal", "Cosmeticos & Perfumaria Artesanal", "Cosméticos & Perfumaria", "Cosmeticos & Perfumaria", "Cosméticos & Perfumaria – Módulo 1", "Cosmeticos & Perfumaria - Modulo 1", "Cosmético e Perfumaria", "Cosmético 2", "Cosméticos & Perfumaria 2"],
   },
   {
     slug: "produtos-limpeza",
