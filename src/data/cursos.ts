@@ -450,7 +450,7 @@ export const cursos: Curso[] = [
     video: "/limpeza.mp4",
     nivel: "Iniciante",
     tempoLeitura: "4 horas",
-    preco: 240,
+    preco: 190,
     beneficios: ["Aula prática com uma Química", "Materiais inclusos e coffee break", "Certificado digital de conclusão"],
     beneficioDestaque: "Curso presencial com duração de 4 horas",
     datas: ["2027-04-03T09:00:00"],
